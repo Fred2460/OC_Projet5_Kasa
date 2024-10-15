@@ -17,9 +17,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      margin: 50px;
+      margin: 0px;
       padding: 0px;
-      gap: 0px;
+
     }
 `
 

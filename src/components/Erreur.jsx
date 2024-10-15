@@ -31,7 +31,7 @@ const StyledLink = styled(Link)`
   text-align: center;
 `
 
-function Erreur() {
+function Error() {
   return (
     <ErrorWrapper>
       <ErrorTitle>404</ErrorTitle>
@@ -43,4 +43,4 @@ function Erreur() {
   )
 }
 
-export default Erreur
+export default Error
