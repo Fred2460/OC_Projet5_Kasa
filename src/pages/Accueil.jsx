@@ -1,25 +1,18 @@
-import logo from '../assets/logo.svg';
-import '../styles/App.css';
+import bannerPicture from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg';
+import '../styles/Accueil.css';
+import Card from './components/Card'
 
-function App() {
+function Accueil() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload OC_Projet5_Kasa.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Accueil">
+        <img src={bannerPicture} className="Banner" alt="Bord de mer" />
+        <div className="Gallery">
+          <Card>
+
+          </Card>
+        </div>
     </div>
   );
 }
 
-export default App;
+export default Accueil;

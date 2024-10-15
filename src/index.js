@@ -1,13 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-//import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Accueil from './pages/Accueil'
 import APropos from './pages/APropos'
 //import F-Logements from './pages/F-Logements'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Error from './components/Error'
+import Error from './components/Erreur'
 import createGlobalStyle from 'styled-components'
 import './styles/index.css';
 

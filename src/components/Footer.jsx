@@ -13,8 +13,8 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  background-color: ${colors.backgroundMain};
+  color: ${colors.textFooter};
+  background-color: ${colors.backgroundFooter};
   font-size: 24px;
   font-weight: 500;
 `

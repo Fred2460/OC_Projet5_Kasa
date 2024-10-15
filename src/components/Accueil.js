@@ -1,9 +1,9 @@
 import logo from '../assets/logo.svg';
-import '../styles/App.css';
+import '../styles/Accueil.css';
 
-function App() {
+function Accueil() {
   return (
-    <div className="App">
+    <div className="Accueil">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Accueil;

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import colors from '../styles/colors'
 import PinkLogo from '../assets/Logo_KasaPink.png'
 
 const HomeLogo = styled.img`
@@ -11,11 +12,12 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: ${colors.backgroundMain}
 `
 
 const StyledLink = styled(Link)`
   padding: 10px 15px;
-  color: #8186a0;
+  color: ${colors.textLow};
   text-decoration: none;
   font-size: 18px;
   text-align: center;
@@ -23,7 +25,7 @@ const StyledLink = styled(Link)`
 /*
 const StyledLink = styled(Link)`
   padding: 10px 15px;
-  color: #8186a0;
+  color: ${colors.textLow};
   text-decoration: none;
   font-size: 18px;
   text-align: center;

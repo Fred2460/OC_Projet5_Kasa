@@ -3,17 +3,20 @@ import styled from 'styled-components'
 import colors from '../styles/colors'
 
 const ErrorWrapper = styled.div`
-  margin: 30px;
   display: flex;
   flex-direction: column;
-  color: ${colors.primary};
-  background-color: ${colors.backgroundMain};
   align-items: center;
+  color: ${colors.textMain};
+  background-color: ${colors.backgroundMain};
+  font-type: 'Montserrat';
+  margin: 50px;
+  gap: 60px;
 `
 
 const ErrorTitle = styled.h1`
   font-size: 288px;
   font-weight: 700;
+  margin: 0;
 `
 
 const ErrorSubtitle = styled.h2`
@@ -22,13 +25,13 @@ const ErrorSubtitle = styled.h2`
 
 const StyledLink = styled(Link)`
   padding: 10px 15px;
-  color: black;
+  color: ${colors.textLow};
   text-decoration: underline;
   font-size: 18px;
   text-align: center;
 `
 
-function Error() {
+function Erreur() {
   return (
     <ErrorWrapper>
       <ErrorTitle>404</ErrorTitle>
@@ -40,4 +43,4 @@ function Error() {
   )
 }
 
-export default Error
+export default Erreur
