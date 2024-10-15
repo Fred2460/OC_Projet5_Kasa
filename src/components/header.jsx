@@ -25,6 +25,24 @@ const StyledLink = styled(Link)`
   font-size: 24px;
   text-align: center;
 `
+
+const activeUrl = window.location.pathname;
+console.log("activeUrl=", activeUrl);
+//const pageAPropos = false;
+//const pageAccueil = false;
+/*
+if (activeUrl === "/APropos") {
+  const pageAPropos = true;
+  const pageAccueil = false;
+} else if (activeUrl === "/") {
+  const pageAPropos = false;
+  const pageAccueil = true;
+} else {
+  const pageAccueil = false;
+  const pageAPropos = false;
+};
+
+console.log("page=", pageAccueil, pageAPropos);
 /*
 const StyledLink = styled(Link)`
   padding: 10px 15px;

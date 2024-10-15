@@ -13,7 +13,6 @@ function Accueil() {
         <div className="Gallery">
           {Logements.map(({id, title}) => (
             <Card
-              
               title={Logements.title}
             />
           ))}
