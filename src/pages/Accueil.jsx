@@ -1,4 +1,4 @@
-import bannerPicture from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg';
+import pictureAccueil from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg';
 import '../styles/Accueil.css';
 import Card from '../components/Card'
 //import PropTypes from 'prop-types'
@@ -8,9 +8,11 @@ import Logements from '../datas/logements.json'
 
 function Accueil() {
   return (
-    <div className="Accueil">
-        <img src={bannerPicture} className="Banner" alt="Bord de mer" />
-        <div className="Gallery">
+    <div className="accueil">
+        <div className="banner">
+          <img src={pictureAccueil} className="bannerPicture" alt="Bord de mer" />
+        </div>
+        <div className="gallery">
           {Logements.map(({id, title}) => (
             <Card
               title={Logements.title}

@@ -13,21 +13,31 @@ const CardTitle = styled.span`
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: bottom;
   background-color: ${colors.backgroundBlock};
   border-radius: 10px;
   /*width: 340px;*/
   height: 340px;
   width: 100%;
   transition: 200ms;
+  background-color: #FF6060;
+/*box-sizing: border-box;*/
+position: relative;
+overflow: hidden;
+aspect-ratio: 1 / 1;
+justify-content: left;
+align-items: bottom;
 `
+
 
 function Card({ title }) {
   return (
     <CardWrapper>
-      <CardTitle>{title}</CardTitle>
+      <CardTitle>Titre</CardTitle>        
     </CardWrapper>
   )
 }
+//<CardTitle>{title}</CardTitle>
 
 Card.propTypes = {
   title: PropTypes.string.isRequired
