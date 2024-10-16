@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../styles/colors'
 import PinkLogo from '../assets/Logo_KasaPink.png'
-import activeUrl from './ActivePath'
+//import { useLocation } from 'react-router-dom'
 
 const HomeLogo = styled.img`
   height: 70px;
@@ -29,11 +29,9 @@ const StyledLink = styled(Link)`
     props.$isFullLink && 
     `text-decoration: underline;`}
 `
-//activeUrl = 
+
+const activeUrl = window.location.pathname;
 console.log("activeUrl=", activeUrl);
-const actuelUrl = window.location.pathname;
-console.log("windows.location.pathname=", actuelUrl);
-//console.log("activePath=", activePath);
 
 /*function Header(props) {*/
 function Header() {
