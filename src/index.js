@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 //import { useState, useEffect } from 'react'
 import Accueil from './pages/Accueil'
 import APropos from './pages/APropos'
-//import F-Logements from './pages/F-Logements'
 import Header from './components/Header'
-//import ActivePath from './components/ActivePath'
 import Footer from './components/Footer'
 import Error from './components/Erreur'
+//import F-Logements from './pages/F-Logements'
+//import ActivePath from './components/ActivePath'
 import createGlobalStyle from 'styled-components'
 import './styles/index.css';
 

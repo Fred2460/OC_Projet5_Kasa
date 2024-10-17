@@ -1,5 +1,5 @@
 import pictureAPropos from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg';
-import '../styles/Accueil.css';
+import '../styles/accueil.css';
 //import PropTypes from 'prop-types'
 //import styled from 'styled-components'
 //import colors from '../styles/colors'

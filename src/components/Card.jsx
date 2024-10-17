@@ -33,11 +33,10 @@ align-items: bottom;
 function Card({ title }) {
   return (
     <CardWrapper>
-      <CardTitle>Titre</CardTitle>        
+      <CardTitle>{title}</CardTitle>        
     </CardWrapper>
   )
 }
-//<CardTitle>{title}</CardTitle>
 
 Card.propTypes = {
   title: PropTypes.string.isRequired

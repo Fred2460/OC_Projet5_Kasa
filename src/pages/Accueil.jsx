@@ -1,10 +1,16 @@
 import pictureAccueil from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg';
-import '../styles/Accueil.css';
+import '../styles/accueil.css';
 import Card from '../components/Card'
 //import PropTypes from 'prop-types'
 //import styled from 'styled-components'
 //import colors from '../styles/colors'
-import Logements from '../datas/logements.json'
+//import Logements from '../components/Logements'
+//import React, { useState, useEffect } from 'react';
+import Logements from '../datas/logements.json';
+
+console.log("Logements=", Logements)
+console.log("Logements[1]=", Logements[1])
+console.log("Logements[1].id=", Logements[1].id)
 
 function Accueil() {
   return (
@@ -15,7 +21,7 @@ function Accueil() {
       <div className="gallery">
         {Logements.map(({id, title}) => (
           <Card
-            title={Logements.title}
+            title ={title}
           />
         ))}
       </div>
