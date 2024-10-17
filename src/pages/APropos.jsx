@@ -7,7 +7,7 @@ import '../styles/Accueil.css';
 function APropos() {
   return (
     <div className="accueil">
-      <div className="banner">
+      <div className="banner bannerAPropos">
         <img src={pictureAPropos} className="bannerPicture" alt="Bord de mer" />
       </div>
       <div className="valeurs">

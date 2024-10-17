@@ -9,16 +9,16 @@ import Logements from '../datas/logements.json'
 function Accueil() {
   return (
     <div className="accueil">
-        <div className="banner">
-          <img src={pictureAccueil} className="bannerPicture" alt="Bord de mer" />
-        </div>
-        <div className="gallery">
-          {Logements.map(({id, title}) => (
-            <Card
-              title={Logements.title}
-            />
-          ))}
-        </div>
+      <div className="banner bannerAccueil">
+        <img src={pictureAccueil} className="bannerPicture" alt="Bord de mer" />
+      </div>
+      <div className="gallery">
+        {Logements.map(({id, title}) => (
+          <Card
+            title={Logements.title}
+          />
+        ))}
+      </div>
     </div>
   );
 }

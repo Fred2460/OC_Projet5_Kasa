@@ -8,7 +8,7 @@ const ErrorWrapper = styled.div`
   align-items: center;
   color: ${colors.textMain};
   background-color: ${colors.backgroundMain};
-  font-type: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   margin: 50px;
   gap: 60px;
 `

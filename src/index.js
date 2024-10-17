@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+//import { useState, useEffect } from 'react'
 import Accueil from './pages/Accueil'
 import APropos from './pages/APropos'
 //import F-Logements from './pages/F-Logements'
@@ -14,7 +15,7 @@ import './styles/index.css';
 
 const GlobalStyle = createGlobalStyle`
     * {
-      font-family: 'Montserrat', Helvetica, sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     body {
