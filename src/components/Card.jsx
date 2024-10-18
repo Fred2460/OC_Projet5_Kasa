@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import colors from '../styles/colors'
 import { Link } from 'react-router-dom'
 import '../styles/accueil.css';
+import { useState } from 'react'
 //import FLogement from './pages/FLogement'
 
 const CardTitle = styled.span`
@@ -26,26 +27,29 @@ const CardWrapper = styled.div`
   background-color: #FF6060;
 `
 
-function handleClick(id, title) {
+
+function handleClick(id,title) {
 	alert(`Vous voulez visiter ${title} - ${id} ? Très bon choix 🌱✨`)
-  const lien = `/FLogement/:` + {id}
-  //return (
-  //  <Link to="/FLogement">
-  //)
+  window.localStorage.setItem("locationId", (id))
+  console.log("LocalStorage=", (id))
+  //updateCardId((id))
+  
+  const lien = "/FLogement/" + (id)
+  console.log("Lien var=", lien)
 }
 
 function Card({ id, title }) {
+  const [CardId, updateCardId] = useState(0)
   return (
-    <Link to="`/FLogement/:` + {id}" >
-      <CardWrapper onClick={() => handleClick(id, title)}>
-        <div key={id}>
-          <CardTitle>{title}</CardTitle>
-        </div>
-      </CardWrapper>
-    </Link>
+    <CardWrapper onClick={() => updateCardId((id))}>
+      <div>
+        <p>{id}</p>
+        <Link to="/FLogement" className="cardTitle">{title}</Link>
+      </div>
+    </CardWrapper>
   )
 }
-
+//    <CardWrapper onClick={() => handleClick(id, title)}>
 //<button onClick={() => handleClick(id, title)}></button>       
 
 Card.propTypes = {

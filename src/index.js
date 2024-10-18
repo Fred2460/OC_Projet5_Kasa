@@ -7,8 +7,6 @@ import APropos from './pages/APropos'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Erreur'
-//import F-Logements from './pages/F-Logements'
-//import ActivePath from './components/ActivePath'
 import createGlobalStyle from 'styled-components'
 import './styles/index.css';
 import FLogement from './pages/FLogement'
@@ -34,7 +32,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/APropos" element={<APropos />} />
-        <Route path="/FLogement/:id" component={Location} element={<FLogement />} />
+        <Route path="/FLogement" element={<FLogement />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

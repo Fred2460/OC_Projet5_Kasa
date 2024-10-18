@@ -11,7 +11,7 @@ import Logements from '../datas/logements.json';
 console.log("Logements=", Logements)
 console.log("Logements[1]=", Logements[1])
 console.log("Logements[1].id=", Logements[1].id)
-
+localStorage.clear()
 
 function Accueil() {
   return (
