@@ -12,6 +12,7 @@ console.log("Logements=", Logements)
 console.log("Logements[1]=", Logements[1])
 console.log("Logements[1].id=", Logements[1].id)
 
+
 function Accueil() {
   return (
     <div className="accueil">
@@ -21,7 +22,8 @@ function Accueil() {
       <div className="gallery">
         {Logements.map(({id, title}) => (
           <Card
-            title ={title}
+            id={id}
+            title={title}
           />
         ))}
       </div>

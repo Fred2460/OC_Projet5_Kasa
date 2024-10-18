@@ -11,7 +11,7 @@ import Error from './components/Erreur'
 //import ActivePath from './components/ActivePath'
 import createGlobalStyle from 'styled-components'
 import './styles/index.css';
-
+import FLogement from './pages/FLogement'
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -34,6 +34,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/APropos" element={<APropos />} />
+        <Route path="/FLogement/:id" component={Location} element={<FLogement />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

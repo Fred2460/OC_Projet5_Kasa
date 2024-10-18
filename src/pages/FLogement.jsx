@@ -1,14 +1,16 @@
 import '../styles/flogement.css';
-//import logements from '../datas/logements.json'
+//import Logements from '../datas/logements.json'
 
-function FLogement() {
+
+function FLogement({ id }) {
     return (
-      <div className="flogement">
+      <div key={id} className="flogement">
         <div className="carousel">
 
         </div>
         <div className="title">
-
+          <h1>{id.title}</h1>
+          <h2>{id.location}</h2>
         </div>
         <div className="host">
 
