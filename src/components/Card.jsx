@@ -24,17 +24,13 @@ const CardWrapper = styled.div`
   background-color: #FF6060;
 `
 
-function handleClick(id,title) {
-	alert(`Vous voulez visiter ${title} - ${id} ? Très bon choix 🌱✨`)
-  
-  const lien = `/FLogement/${id}`
-  console.log("Lien var=", lien)
-  window.location.href=lien
+function handleClick(id) {
+  window.location.href=`/FLogement/${id}`
 }
 
 function Card({ id, title }) {
   return (
-    <CardWrapper onClick={() => handleClick(id, title)}>
+    <CardWrapper onClick={() => handleClick(id)}>
       <CardTitle>{title}</CardTitle>
     </CardWrapper>
   )
