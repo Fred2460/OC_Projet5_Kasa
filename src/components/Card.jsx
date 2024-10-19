@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../styles/colors'
-import { Link } from 'react-router-dom'
 import '../styles/accueil.css';
-import { useState } from 'react'
-//import FLogement from './pages/FLogement'
 
 const CardTitle = styled.span`
   color: ${colors.textBlock};
@@ -27,30 +24,21 @@ const CardWrapper = styled.div`
   background-color: #FF6060;
 `
 
-
 function handleClick(id,title) {
 	alert(`Vous voulez visiter ${title} - ${id} ? Très bon choix 🌱✨`)
-  window.localStorage.setItem("locationId", (id))
-  console.log("LocalStorage=", (id))
-  //updateCardId((id))
   
-  const lien = "/FLogement/" + (id)
+  const lien = `/FLogement/${id}`
   console.log("Lien var=", lien)
+  window.location.href=lien
 }
 
 function Card({ id, title }) {
-  const [CardId, updateCardId] = useState(0)
   return (
-    <CardWrapper onClick={() => updateCardId((id))}>
-      <div>
-        <p>{id}</p>
-        <Link to="/FLogement" className="cardTitle">{title}</Link>
-      </div>
+    <CardWrapper onClick={() => handleClick(id, title)}>
+      <CardTitle>{title}</CardTitle>
     </CardWrapper>
   )
 }
-//    <CardWrapper onClick={() => handleClick(id, title)}>
-//<button onClick={() => handleClick(id, title)}></button>       
 
 Card.propTypes = {
   id: PropTypes.string.isRequired,

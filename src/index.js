@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-//import { useState, useEffect } from 'react'
 import Accueil from './pages/Accueil'
 import APropos from './pages/APropos'
+import FLogement from './pages/FLogement'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Erreur'
 import createGlobalStyle from 'styled-components'
 import './styles/index.css';
-import FLogement from './pages/FLogement'
+import logementsData from './datas/logements.json'
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -30,9 +30,9 @@ root.render(
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/" element={<Accueil />} />
+        <Route path="/" element={<Accueil logements={logementsData} />} />
         <Route path="/APropos" element={<APropos />} />
-        <Route path="/FLogement" element={<FLogement />} />
+        <Route path="/FLogement/:id" element={<FLogement />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
