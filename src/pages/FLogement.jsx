@@ -1,8 +1,8 @@
 import '../styles/flogement.css';
 import logementsData from '../datas/logements.json'
 import { useParams } from 'react-router-dom';
-import activeStar from '../assets/star-active.png'
-import inactiveStar from '../assets/star-inactive.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 function FLogement() {
   const { id } = useParams()
@@ -15,7 +15,10 @@ function FLogement() {
     <div className='info'>
       <div className='title'>
         <h1 className='title--main'>{logement.title}</h1>
-        <p>{logement.host.name}</p>
+        <div className='title--host'>
+          <p>{logement.host.name}</p>
+          <img src={logement.host.picture} alt='Host avatar' />
+        </div>
       </div>
       <div className='location'>
         <p>{logement.location}</p>
@@ -28,33 +31,25 @@ function FLogement() {
           <p className={logement.tags[3] !== undefined ? 'tagsrating__tags--tag' : ''}>{logement.tags[3]}</p>
           <p className={logement.tags[4] !== undefined ? 'tagsrating__tags--tag' : ''}>{logement.tags[4]}</p>
         </div>
+        <div className='tagsrating__stars'>
+          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 1 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
+          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 2 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
+          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 3 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
+          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 4 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
+          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 5 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
+        </div>
       </div>
     </div>
   );
 }
+
+
 /*
-      
-      
-      
-      
-      
-      
-      
-      
-        <div className='tagsrating__stars'>
-          <src>{logement.rating >=0 ? {activeStar} : {inactiveStar}} </src>
-          <src>{logement.rating >=1 ? {activeStar} : {inactiveStar}} </src>
-          <src>{logement.rating >=2 ? {activeStar} : {inactiveStar}} </src>
-          <src>{logement.rating >=3 ? {activeStar} : {inactiveStar}} </src>
-          <src>{logement.rating >=4 ? {activeStar} : {inactiveStar}} </src>
-        </div>
-      </div>
-
         <p>host.picture= {logement.host.picture}</p>
-
 
         <p>description= {logement.description}</p>
         <p>equipments[ ]= {logement.equipments}</p>
 */
+
 export default FLogement;
   

@@ -34,6 +34,26 @@
     margin: 0;
 }
 
+.title--host {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    font-size: 18px;
+    align-items: center;
+    width: 93px;
+}
+
+.title--host p {
+    margin: 0;
+    text-align: end;
+}
+
+.title--host img {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+}
+
 .location {
     flex-direction: row;
     justify-content: start;
@@ -51,7 +71,7 @@
 }
 
 .tagsrating__tags {
-    gap: 5px;
+    gap: 10px;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -70,13 +90,21 @@
 }
 
 .tagsrating__stars {
-    gap: 5px;
     justify-content: end;
 }
 
-.tagsrating__stars--star {
+.tagsrating__stars--star.active {
     width: 25px;
     height: 24px;
+    color:#FF6060;
+    margin-left: 5px;
+}
+
+.tagsrating__stars--star.inactive {
+    width: 25px;
+    height: 24px;
+    color:#E3E3E3;
+    margin-left: 5px;
 }
 
 .details {
