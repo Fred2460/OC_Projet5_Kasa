@@ -8,6 +8,9 @@ const colors = {
     backgroundBlock: '#FF6060', // Bittersweet
     backgroundPicture: '#F6F6F6', // Grey Seasalt
     backgroundFooter: '#000000', // Black
+
+    filledStar: '#FF6060', // Bittersweet filled star
+    emptyStar: '#E3E3E3', // Grey empty star 
 }
 
 export default colors

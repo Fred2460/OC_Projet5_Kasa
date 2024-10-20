@@ -1,0 +1,89 @@
+
+:root {
+    --textMain: #FF6060; /* Bittersweet*/
+    --textLow: #000000; /* Black */
+    --textBlock:#FFFFFF; /* White */
+    --textFooter: #FFFFFF; /* White */
+    --backgroundMain: #FFFFFF; /* White */
+    --backgroundBlock: #FF6060; /* Bittersweet */
+    --backgroundPicture: #F6F6F6; /* Grey Seasalt */
+    --backgroundFooter: #000000; /* Black */
+    --filledStar: #FF6060; /* Bittersweet filled star */
+    --emptyStar: #E3E3E3; /* Grey empty star */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin: 30px 100px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title--main {
+    font-size: 36px;
+    font-family: 'Montserrat';
+    color: var(--textMain);
+    margin: 0;
+}
+
+.location {
+    flex-direction: row;
+    justify-content: start;
+    font-size: 18px;
+}
+
+.location p {
+    margin: 0;
+}
+
+.tagsrating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tagsrating__tags {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.tagsrating__tags--tag {
+    height: 25px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    background: var(--backgroundBlock);
+    color: var(--textBlock);
+    border-radius: 10px;
+    padding: 4px 10px 0 10px; 
+}
+
+.tagsrating__stars {
+    gap: 5px;
+    justify-content: end;
+}
+
+.tagsrating__stars--star {
+    width: 25px;
+    height: 24px;
+}
+
+.details {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details__descr {
+
+}
