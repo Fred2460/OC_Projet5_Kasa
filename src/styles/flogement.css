@@ -78,7 +78,6 @@
 }
 
 .tagsrating__tags--tag {
-    height: 25px;
     border: none;
     font-size: 14px;
     font-weight: 700;
@@ -86,7 +85,7 @@
     background: var(--backgroundBlock);
     color: var(--textBlock);
     border-radius: 10px;
-    padding: 4px 10px 0 10px; 
+    padding: 3px 22px 3px 22px; 
 }
 
 .tagsrating__stars {
@@ -105,15 +104,6 @@
     height: 24px;
     color:#E3E3E3;
     margin-left: 5px;
-}
-
-.details {
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.details__descr {
-
 }
 
 .carouselContainer {
@@ -166,4 +156,43 @@
     font-size: 16px;
     font-weight: 500;
     border-radius: 5px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description, .equipments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+    /*width: 534px;*/
+}
+
+.btnDetails {
+    text-align: left;
+    color: white;
+    background: #FF6060;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+}
+
+.detailsDescription {
+    display: flex;
+    width: 100%;
+    color:#000000;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    padding: 10px; 
+}
+
+.listEquipment {
+    list-style: none;
 }

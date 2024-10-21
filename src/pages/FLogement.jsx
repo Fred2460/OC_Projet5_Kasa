@@ -33,7 +33,9 @@ function FLogement() {
   }
 
   /*gestion du détails des informations sur le logement - boutons 'collapse' */
-  const [open, setOpen] = useState(false);
+  const [openDescription, setOpenDescription] = useState(false);
+  const [openEquipments, setOpenEquipments] = useState(false);
+
 
   /* gestion du cas où le logement de l'id sélectionné n'existe pas */
   if (!logement) {
@@ -79,7 +81,35 @@ function FLogement() {
         </div>
       </div>
       <div className='details'> {/* informations détaillées du logement */}
-
+        <div className='description'>
+          <button className="btnDetails" onClick={() => setOpenDescription(!openDescription)}>
+            Description
+            {openDescription ? <chevronUp size={20} /> : <chevronDown size={20} />}
+          </button>
+          <Collapse in={openDescription}>
+            <div classname='detailsDescription'>
+              {logement.description}
+            </div>
+          </Collapse>
+        </div>
+        <div className='equipments'>
+          <button className="btnDetails" onClick={() => setOpenEquipments(!openEquipments)}>
+            Équipements
+            {openEquipments ? <chevronUp size={20} /> : <chevronDown size={20} />}
+          </button>
+          <Collapse in={openEquipments}>
+            <div classname='detailsEquipments'>
+              <ul className='listEquipment'>
+                <li>{logement.equipments[0] !== undefined && logement.equipments[0]}</li>
+                <li>{logement.equipments[1] !== undefined && logement.equipments[1]}</li>
+                <li>{logement.equipments[2] !== undefined && logement.equipments[2]}</li>
+                <li>{logement.equipments[3] !== undefined && logement.equipments[3]}</li>
+                <li>{logement.equipments[4] !== undefined && logement.equipments[4]}</li>
+                <li>{logement.equipments[5] !== undefined && logement.equipments[5]}</li>
+              </ul>
+            </div>
+          </Collapse>
+        </div>
       </div>
     </div>
   );
@@ -87,6 +117,40 @@ function FLogement() {
 
 
 /*
+
+<Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-[350px]">
+  <CollapsibleTrigger asChild>
+    <Button variant="outline" className="w-full flex justify-between items-center">
+      Toggle Content
+      {isOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+    </Button>
+  </CollapsibleTrigger>
+  <CollapsibleContent className="p-4 bg-gray-100 mt-2 rounded">
+    <p>This is the collapsible content. It can be expanded or collapsed.</p>
+  </CollapsibleContent>
+</Collapsible>
+
+
+<button className='btnDetails' onClick={() => setOpenDescription(!openDescription)}>
+  <p>Description</p>
+  {openDescription ? {chevronDown} : {chevronUp}}
+</button>
+<Collapse in={openDescription}>
+  <div className='detailsDescription'>
+    <p>{logement.description}</p>
+  </div>
+</Collapse>
+<button className='btn' onClick={() => setOpenEquipments(!openEquipments)}>
+  {openEquipments ? 'Masquer' : 'Afficher'}
+</button>
+<Collapse in={openEquipments}>
+  <div className='detailsEquipments'>
+    <ul>{logement.equipments}</ul>
+  </div>
+</Collapse>
+
+
+
         <p>description= {logement.description}</p>
         <p>equipments[ ]= {logement.equipments}</p>
 */
