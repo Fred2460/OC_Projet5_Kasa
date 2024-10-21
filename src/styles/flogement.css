@@ -115,3 +115,50 @@
 .details__descr {
 
 }
+
+.carouselContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 415px;
+    margin-bottom: 20px;
+}
+
+.carouselPicture {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.previousButton, .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    width: 100px;
+    background: none;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.previousButton {
+    left: 10px;
+}
+  
+.nextButton {
+    right: 10px;
+}
+
+.slideIndex {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+}

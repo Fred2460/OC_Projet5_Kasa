@@ -3,16 +3,43 @@ import logementsData from '../datas/logements.json'
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import leftChevron from '../assets/leftChevron.png'
+import rightChevron from '../assets/rightChevron.png'
+import { useState } from 'react';
 
 function FLogement() {
   const { id } = useParams()
   const logement = logementsData.find((logement) => logement.id === id)
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   if (!logement) {
     return <h2>Logement non trouvé</h2>;
+  }
+  console.log("images carrousel=",logement.pictures)
+
+  function nextImage() {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length);
+  }
+
+  function prevImage() {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
+    );
   }
 
   return (
     <div className='info'>
+      <div className='carouselContainer'>
+        <button className='previousButton' onClick={prevImage}>
+          <img src={leftChevron} alt='Chevron précédent' /> {/* chevron précédent */}
+        </button>
+        <img className='carouselPicture' src={logement.pictures[currentIndex]} alt='carousel' />
+        <p className='slideIndex'>{currentIndex+1}/{logement.pictures.length}</p>
+        <button className='nextButton' onClick={nextImage}>
+          <img src={rightChevron} alt='Chevron suivant' /> {/* chevron suivant */}
+        </button>
+      </div>
       <div className='title'>
         <h1 className='title--main'>{logement.title}</h1>
         <div className='title--host'>
@@ -45,8 +72,6 @@ function FLogement() {
 
 
 /*
-        <p>host.picture= {logement.host.picture}</p>
-
         <p>description= {logement.description}</p>
         <p>equipments[ ]= {logement.equipments}</p>
 */

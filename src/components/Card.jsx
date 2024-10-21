@@ -15,13 +15,15 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: ${colors.backgroundBlock};
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%),
+    #FF6060;
   border-radius: 10px;
   /*width: 340px;*/
   height: 340px;
   width: 100%;
   transition: 200ms;
-  background-color: #FF6060;
+  cursor: pointer;
 `
 
 function handleClick(id) {
