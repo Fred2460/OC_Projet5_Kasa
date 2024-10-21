@@ -10,6 +10,7 @@ import Error from './components/Erreur'
 import createGlobalStyle from 'styled-components'
 import './styles/index.css';
 import logementsData from './datas/logements.json'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -19,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
     body {
       margin: 0px;
       padding: 0px;
-
     }
 `
 

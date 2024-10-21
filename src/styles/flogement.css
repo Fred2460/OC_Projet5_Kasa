@@ -132,6 +132,11 @@
     object-fit: cover;
 }
 
+/*.carouselPicture::after {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 25px;
+}*/
+
 .previousButton, .nextButton {
     position: absolute;
     top: 50%;
