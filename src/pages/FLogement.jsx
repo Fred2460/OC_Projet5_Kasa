@@ -10,7 +10,7 @@ import chevronRight from '../assets/chevronRight.png'
 // pour l'affichage du détails des informations du logement
 import chevronDown from '../assets/ChevronDown.png'
 import chevronUp from '../assets/ChevronUp.png'
-import { Collapse } from 'react-bootstrap';
+import { Collapse } from 'react-bootstrap'
 
 function FLogement() {
   /* récupération de l'id et des informations du logement sélectionné */
@@ -18,28 +18,25 @@ function FLogement() {
   const logement = logementsData.find((logement) => logement.id === id)
 
   /* gestion du carrousel */
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
   
-  console.log("images carrousel=",logement.pictures)
-
   function nextImage() {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length)
   }
 
   function prevImage() {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
-    );
+    )
   }
 
   /*gestion du détails des informations sur le logement - boutons 'collapse' */
   const [openDescription, setOpenDescription] = useState(false);
   const [openEquipments, setOpenEquipments] = useState(false);
 
-
   /* gestion du cas où le logement de l'id sélectionné n'existe pas */
   if (!logement) {
-    return <h2>Logement non trouvé</h2>;
+    return <h2>Logement non trouvé</h2>
   }
 
   return (
@@ -88,7 +85,7 @@ function FLogement() {
           </button>
           <Collapse in={openDescription}>
             <div classname='detailsDescription'>
-              {logement.description}
+              <p>{logement.description}</p>
             </div>
           </Collapse>
         </div>
@@ -112,48 +109,8 @@ function FLogement() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-
-/*
-
-<Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-[350px]">
-  <CollapsibleTrigger asChild>
-    <Button variant="outline" className="w-full flex justify-between items-center">
-      Toggle Content
-      {isOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-    </Button>
-  </CollapsibleTrigger>
-  <CollapsibleContent className="p-4 bg-gray-100 mt-2 rounded">
-    <p>This is the collapsible content. It can be expanded or collapsed.</p>
-  </CollapsibleContent>
-</Collapsible>
-
-
-<button className='btnDetails' onClick={() => setOpenDescription(!openDescription)}>
-  <p>Description</p>
-  {openDescription ? {chevronDown} : {chevronUp}}
-</button>
-<Collapse in={openDescription}>
-  <div className='detailsDescription'>
-    <p>{logement.description}</p>
-  </div>
-</Collapse>
-<button className='btn' onClick={() => setOpenEquipments(!openEquipments)}>
-  {openEquipments ? 'Masquer' : 'Afficher'}
-</button>
-<Collapse in={openEquipments}>
-  <div className='detailsEquipments'>
-    <ul>{logement.equipments}</ul>
-  </div>
-</Collapse>
-
-
-
-        <p>description= {logement.description}</p>
-        <p>equipments[ ]= {logement.equipments}</p>
-*/
-
-export default FLogement;
+export default FLogement
   

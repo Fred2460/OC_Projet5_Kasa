@@ -167,8 +167,7 @@
 .description, .equipments {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 45%;
+    width: 47%;
     /*width: 534px;*/
 }
 
@@ -184,15 +183,14 @@
     border: none;
 }
 
-.detailsDescription {
-    display: flex;
-    width: 100%;
+.description p {
     color:#000000;
     font-family: 'Montserrat';
     font-weight: 400;
-    padding: 10px; 
+    padding: 20px;
 }
 
 .listEquipment {
     list-style: none;
+    padding: 20px;
 }

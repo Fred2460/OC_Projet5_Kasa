@@ -4,7 +4,6 @@
   justify-content: center;
   margin-left: 100px;
   margin-right: 100px;
-
 }
 
 .banner {
@@ -80,7 +79,44 @@
   align-items: bottom;
 }
 
-/*.valeurs {
+
+.valeurs {
+  text-align: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 25px;;
+  margin-bottom: 50px;
   
+}  
+
+.btnValeurs {
+  text-align: left;
+  color: white;
+  background: #FF6060;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  margin-top: 30px;
 }
-*/
+
+.valeurs p {
+  color:#000000;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  padding: 20px 20px 0 20px;
+  text-align: left;
+}
+
+.detailsValeurs {
+  display: flex;
+  width: 100%;
+  color:#000000;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  padding: 10px;
+}
