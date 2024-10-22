@@ -1,8 +1,8 @@
 import pictureAPropos from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import '../styles/accueil.css'
 import { useState } from 'react'
-import chevronDown from '../assets/ChevronDown.png'
-import chevronUp from '../assets/ChevronUp.png'
+import chevronDown from '../assets/chevronDown.png'
+import chevronUp from '../assets/chevronUp.png'
 import { Collapse } from 'react-bootstrap'
 
 function APropos() {

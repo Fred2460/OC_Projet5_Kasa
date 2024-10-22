@@ -1,17 +1,17 @@
 import '../styles/flogement.css'
+import Error from './Erreur'
 import logementsData from '../datas/logements.json'
 import { useParams } from 'react-router-dom'
-// pour le carrousel
 import { useState } from 'react';
+// pour le carrousel
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import chevronLeft from '../assets/chevronLeft.png'
 import chevronRight from '../assets/chevronRight.png'
 // pour l'affichage du détails des informations du logement
-import chevronDown from '../assets/ChevronDown.png'
-import chevronUp from '../assets/ChevronUp.png'
+import chevronDown from '../assets/chevronDown.png'
+import chevronUp from '../assets/chevronUp.png'
 import { Collapse } from 'react-bootstrap'
-import Error from './Erreur'
 
 function FLogement() {
   /* récupération de l'id et des informations du logement sélectionné */
