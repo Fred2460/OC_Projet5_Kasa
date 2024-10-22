@@ -11,6 +11,7 @@ import chevronRight from '../assets/chevronRight.png'
 import chevronDown from '../assets/ChevronDown.png'
 import chevronUp from '../assets/ChevronUp.png'
 import { Collapse } from 'react-bootstrap'
+import Error from '../components/Erreur'
 
 function FLogement() {
   /* récupération de l'id et des informations du logement sélectionné */
@@ -36,7 +37,7 @@ function FLogement() {
 
   /* gestion du cas où le logement de l'id sélectionné n'existe pas */
   if (!logement) {
-    return <h2>Logement non trouvé</h2>
+    return <Error />
   }
 
   return (
