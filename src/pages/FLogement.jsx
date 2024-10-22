@@ -11,7 +11,7 @@ import chevronRight from '../assets/chevronRight.png'
 import chevronDown from '../assets/ChevronDown.png'
 import chevronUp from '../assets/ChevronUp.png'
 import { Collapse } from 'react-bootstrap'
-import Error from '../components/Erreur'
+import Error from './Erreur'
 
 function FLogement() {
   /* récupération de l'id et des informations du logement sélectionné */
@@ -64,18 +64,16 @@ function FLogement() {
       </div>
       <div className='tagsrating'>
         <div className='tagsrating__tags'> {/* tags du logement */}
-          <p className={logement.tags[0] !== undefined ? 'tagsrating__tags--tag' : ''}>{logement.tags[0]}</p>
-          <p className={logement.tags[1] !== undefined ? 'tagsrating__tags--tag' : ''}>{logement.tags[1]}</p>
-          <p className={logement.tags[2] !== undefined ? 'tagsrating__tags--tag' : ''}>{logement.tags[2]}</p>
-          <p className={logement.tags[3] !== undefined ? 'tagsrating__tags--tag' : ''}>{logement.tags[3]}</p>
-          <p className={logement.tags[4] !== undefined ? 'tagsrating__tags--tag' : ''}>{logement.tags[4]}</p>
+          {logement.tags.map((tag, index) => (
+            <p key={index} className={tag !== undefined ? 'tagsrating__tags--tag' : ''}>
+              {tag}
+            </p>
+          ))}
         </div>
         <div className='tagsrating__stars'> {/* rating du logement */}
-          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 1 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
-          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 2 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
-          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 3 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
-          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 4 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
-          <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 5 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
+          {[...Array(5)].map((_, index) => (
+            <FontAwesomeIcon key={index} icon={faStar} className={parseInt(logement.rating) >= index + 1 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
+          ))}
         </div>
       </div>
       <div className="details"> {/* informations détaillées du logement */}
@@ -99,12 +97,9 @@ function FLogement() {
           </div>
           <Collapse in={openEquipments}>
             <ul className="listEquipment">
-              <li>{logement.equipments[0] !== undefined && logement.equipments[0]}</li>
-              <li>{logement.equipments[1] !== undefined && logement.equipments[1]}</li>
-              <li>{logement.equipments[2] !== undefined && logement.equipments[2]}</li>
-              <li>{logement.equipments[3] !== undefined && logement.equipments[3]}</li>
-              <li>{logement.equipments[4] !== undefined && logement.equipments[4]}</li>
-              <li>{logement.equipments[5] !== undefined && logement.equipments[5]}</li>
+              {logement.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
             </ul>
           </Collapse>
         </article>

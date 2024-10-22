@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../styles/colors'
 import PinkLogo from '../assets/Logo_KasaPink.png'
@@ -17,15 +17,15 @@ const NavContainer = styled.nav`
   margin-right: 100px;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   padding: 10px 15px;
   color: ${colors.textLow};
   text-decoration: none;
   font-size: 24px;
   text-align: center;
-  ${(props) =>
-    props.$isFullLink && 
-    `text-decoration: underline;`}
+  &.active { 
+    text-decoration: underline;
+  }
 `
 
 function Header() {

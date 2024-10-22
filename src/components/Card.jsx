@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import colors from '../styles/colors'
-import '../styles/accueil.css';
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import colors from "../styles/colors"
+import "../styles/accueil.css"
 
 const CardTitle = styled.span`
   color: ${colors.textBlock};
@@ -19,20 +19,21 @@ const CardWrapper = styled.div`
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%),
     #FF6060;
   border-radius: 10px;
-  /*width: 340px;*/
   height: 340px;
   width: 100%;
   transition: 200ms;
   cursor: pointer;
 `
 
-function handleClick(id) {
+function HandleClick(id) {
   window.location.href=`/FLogement/${id}`
 }
 
 function Card({ id, title }) {
+  
+
   return (
-    <CardWrapper onClick={() => handleClick(id)}>
+    <CardWrapper onClick={() => HandleClick(id)}>
       <CardTitle>{title}</CardTitle>
     </CardWrapper>
   )
