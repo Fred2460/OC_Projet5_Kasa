@@ -19,10 +19,12 @@ function APropos() {
       </div>
       <div className="valeurs">
         <article> {/* Valeur : Fiabilité */}
-          <button className="btnValeurs" onClick={() => setOpenFiabilite(!openFiabilite)}>
-            Fiabilite
-            {openFiabilite ? <chevronUp size={20} /> : <chevronDown size={20} />}
-          </button>
+          <div className="bannerValeurs">
+            Fiabilité
+            <button className="chevron" onClick={() => setOpenFiabilite(!openFiabilite)}>
+              {openFiabilite ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+            </button>
+          </div>
           <Collapse in={openFiabilite}>
             <div>
               <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, 
@@ -31,10 +33,12 @@ function APropos() {
           </Collapse>
         </article>
         <article> {/* Valeur : Respect */}
-          <button className="btnValeurs" onClick={() => setOpenRespect(!openRespect)}>
+          <div className="bannerValeurs">
             Respect
-            {openRespect ? <chevronUp size={20} /> : <chevronDown size={20} />}
-          </button>
+            <button className="chevron" onClick={() => setOpenRespect(!openRespect)}>
+              {openRespect ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+            </button>
+          </div>
           <Collapse in={openRespect}>
             <div>
               <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation
@@ -43,10 +47,12 @@ function APropos() {
           </Collapse>
         </article>
         <article> {/* Valeur : Service */}
-          <button className="btnValeurs" onClick={() => setOpenService(!openService)}>
+          <div className="bannerValeurs">
             Service
-            {openService ? <chevronUp size={20} /> : <chevronDown size={20} />}
-          </button>
+            <button className="chevron" onClick={() => setOpenService(!openService)}>
+              {openService ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+            </button>
+          </div>
           <Collapse in={openService}>
             <div>
               <p>La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, 
@@ -55,10 +61,12 @@ function APropos() {
           </Collapse>
         </article>
         <article> {/* Valeur : Sécurité */}
-          <button className="btnValeurs" onClick={() => setOpenSecurite(!openSecurite)}>
-            Securite
-            {openSecurite ? <chevronUp size={20} /> : <chevronDown size={20} />}
-          </button>
+          <div className="bannerValeurs">
+            Sécurité
+            <button className="chevron" onClick={() => setOpenSecurite(!openSecurite)}>
+              {openSecurite ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+            </button>
+          </div>
           <Collapse in={openSecurite}>
             <div>
               <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond 
