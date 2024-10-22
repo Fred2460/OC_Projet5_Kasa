@@ -77,36 +77,36 @@ function FLogement() {
           <FontAwesomeIcon icon={faStar} className={parseInt(logement.rating) >= 5 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
         </div>
       </div>
-      <div className='details'> {/* informations détaillées du logement */}
-        <div className='description'>
-          <button className="btnDetails" onClick={() => setOpenDescription(!openDescription)}>
+      <div className="details"> {/* informations détaillées du logement */}
+        <article className="description"> {/* Description */}
+          <div className="bannerDetails">
             Description
-            {openDescription ? <chevronUp size={20} /> : <chevronDown size={20} />}
-          </button>
+            <button className="chevron" onClick={() => setOpenDescription(!openDescription)}>
+              {openDescription ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+            </button>
+          </div>
           <Collapse in={openDescription}>
-            <div classname='detailsDescription'>
-              <p>{logement.description}</p>
-            </div>
+            <p>{logement.description}</p>
           </Collapse>
-        </div>
-        <div className='equipments'>
-          <button className="btnDetails" onClick={() => setOpenEquipments(!openEquipments)}>
+        </article>
+        <article className="equipments"> {/* Equipements */}
+          <div className="bannerDetails">
             Équipements
-            {openEquipments ? <chevronUp size={20} /> : <chevronDown size={20} />}
-          </button>
+            <button className="chevron" onClick={() => setOpenEquipments(!openEquipments)}>
+              {openEquipments ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+            </button>
+          </div>
           <Collapse in={openEquipments}>
-            <div classname='detailsEquipments'>
-              <ul className='listEquipment'>
-                <li>{logement.equipments[0] !== undefined && logement.equipments[0]}</li>
-                <li>{logement.equipments[1] !== undefined && logement.equipments[1]}</li>
-                <li>{logement.equipments[2] !== undefined && logement.equipments[2]}</li>
-                <li>{logement.equipments[3] !== undefined && logement.equipments[3]}</li>
-                <li>{logement.equipments[4] !== undefined && logement.equipments[4]}</li>
-                <li>{logement.equipments[5] !== undefined && logement.equipments[5]}</li>
-              </ul>
-            </div>
+            <ul className="listEquipment">
+              <li>{logement.equipments[0] !== undefined && logement.equipments[0]}</li>
+              <li>{logement.equipments[1] !== undefined && logement.equipments[1]}</li>
+              <li>{logement.equipments[2] !== undefined && logement.equipments[2]}</li>
+              <li>{logement.equipments[3] !== undefined && logement.equipments[3]}</li>
+              <li>{logement.equipments[4] !== undefined && logement.equipments[4]}</li>
+              <li>{logement.equipments[5] !== undefined && logement.equipments[5]}</li>
+            </ul>
           </Collapse>
-        </div>
+        </article>
       </div>
     </div>
   )

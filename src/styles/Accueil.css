@@ -1,3 +1,4 @@
+/* ------------------ CSS pour page ACCUEIL ----------------------- */
 
 .accueil {
   text-align: center;
@@ -79,7 +80,7 @@
   align-items: bottom;
 }
 
-
+/* ------------------ CSS pour page A PROPOS ----------------------- */
 .valeurs {
   text-align: center;
   justify-content: center;
@@ -87,26 +88,7 @@
   margin-right: 100px;
   margin-top: 25px;;
   margin-bottom: 50px;
-  
-}  
-
-/*.btnValeurs {
-  display: flex;
-flex-direction: row;
-justify-content: space-between;
-
-/*text-align: left;*/
-/*  color: white;
-  background: #FF6060;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-family: 'Montserrat';
-  font-size: 18px;
-  font-weight: 700;
-  border: none;
-  width: 100%;
-  margin-top: 30px;
-}*/
+}
 
 .bannerValeurs {
   display: flex;
@@ -124,6 +106,13 @@ justify-content: space-between;
   margin-top: 30px;
 }
 
+.chevron {
+  width: 24px;
+  height: 13px;
+  background: none;
+  border: none;
+}
+
 .valeurs p {
   color:#000000;
   font-family: 'Montserrat';
@@ -139,11 +128,4 @@ justify-content: space-between;
   font-family: 'Montserrat';
   font-weight: 400;
   padding: 10px;
-}
-
-.chevron {
-  width: 24px;
-  height: 13px;
-  background: none;
-  border: none;
 }
