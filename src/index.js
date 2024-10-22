@@ -8,7 +8,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './pages/Erreur'
 import createGlobalStyle from 'styled-components'
-import './styles/index.css';
+import './styles/index.scss';
 import logementsData from './datas/logements.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 

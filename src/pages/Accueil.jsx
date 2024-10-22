@@ -1,5 +1,5 @@
 import pictureAccueil from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg';
-import '../styles/accueil.css';
+import '../styles/accueil.scss';
 import Card from '../components/Card'
 
 function Accueil({ logements }) {

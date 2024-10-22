@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import colors from "../styles/colors"
-import "../styles/accueil.css"
+import "../styles/accueil.scss"
 
 const CardTitle = styled.span`
   color: ${colors.textBlock};

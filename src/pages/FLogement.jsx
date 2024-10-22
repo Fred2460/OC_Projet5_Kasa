@@ -1,4 +1,4 @@
-import '../styles/flogement.css'
+import '../styles/flogement.scss'
 import Error from './Erreur'
 import logementsData from '../datas/logements.json'
 import { useParams } from 'react-router-dom'

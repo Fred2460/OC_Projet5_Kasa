@@ -1,5 +1,5 @@
 import pictureAPropos from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
-import '../styles/accueil.css'
+import '../styles/accueil.scss'
 import { useState } from 'react'
 import chevronDown from '../assets/chevronDown.png'
 import chevronUp from '../assets/chevronUp.png'
