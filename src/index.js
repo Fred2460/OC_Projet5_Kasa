@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GlobalStyle = createGlobalStyle`
     * {
-      font-family: 'Montserrat', sans-serif;
+      font-family: $font-family-base;
     }
 
     body {

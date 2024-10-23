@@ -5,8 +5,8 @@ import Card from '../components/Card'
 function Accueil({ logements }) {
   return (
     <div className="main">
-      <div className="banner bannerAccueil">
-        <img src={pictureAccueil} className="bannerPicture" alt="Bord de mer" />
+      <div className="banner banner__Accueil">
+        <img src={pictureAccueil} className="banner__Picture" alt="Bord de mer" />
       </div>
       <div className="gallery">
         {logements.map((logement) => (

@@ -22,95 +22,95 @@
     margin: 30px 100px;
 }
 /* -------------------------- CARROUSEL ------------------ */
-.carouselContainer {
+.carousel {
     position: relative;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 415px;
     margin-bottom: 20px;
-}
 
-.carouselPicture {
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-    object-fit: cover;
-}
+    &__picture {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+        object-fit: cover;
+    }
 
-.previousButton, .nextButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    width: 100px;
-    background: none;
-    border: none;
-    padding: 20px;
-    cursor: pointer;
-}
+    &__previousButton, &__nextButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        width: 100px;
+        background: none;
+        border: none;
+        padding: 20px;
+        cursor: pointer;
+    }
 
-.previousButton {
-    left: 10px;
-}
-  
-.nextButton {
-    right: 10px;
-}
+    &__previousButton {
+        left: 10px;
+    }
+      
+    &__nextButton {
+        right: 10px;
+    }
 
-.slideIndex {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 5px;
+    &__slideIndex {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 5px;
+    }
 }
 
 /* ---------------------------- TITRE ET INFORMATIONS GENERALES --------------- */
-.title {
+.identification {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
 
-.title--main {
-    font-size: 36px;
-    color: $primaryT-color;
-    margin: 0;
-}
+    &__title {
+        font-size: 36px;
+        color: $primaryT-color;
+        margin: 0;
+    }
 
-.title--host {
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-    font-size: 18px;
-    align-items: center;
-    width: 93px;
-}
+    &__host {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+        font-size: 18px;
+        align-items: center;
+        width: 93px;
+    }
 
-.title--host p {
-    margin: 0;
-    text-align: end;
-}
+    &__host p {
+        margin: 0;
+        text-align: end;
+    }
+    
+    &__host img {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+    }
 
-.title--host img {
-    width: 64px;
-    height: 64px;
-    border-radius: 32px;
-}
-
-.location {
-    flex-direction: row;
-    justify-content: start;
-    font-size: 18px;
-}
-
-.location p {
-    margin: 0;
+    &__location {
+        flex-direction: row;
+        justify-content: start;
+        font-size: 18px;
+    }
+    
+    &__location p {
+        margin: 0;
+    }
 }
 
 /* -------------------------- TAGS ET RATING -------------------------- */
@@ -119,42 +119,42 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 15px;
-}
 
-.tagsrating__tags {
-    gap: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-}
+    &__tags {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
 
-.tagsrating__tags--tag {
-    border: none;
-    font-size: 14px;
-    font-weight: 700;
-    text-align: center;
-    background: $blockB-color;
-    color: $blockT-color;
-    border-radius: 10px;
-    padding: 3px 22px 3px 22px; 
-}
+        &--tag {
+            border: none;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            background: $blockB-color;
+            color: $blockT-color;
+            border-radius: 10px;
+            padding: 3px 22px 3px 22px; 
+        }
+    }
 
-.tagsrating__stars {
-    justify-content: end;
-}
+    &__stars {
+        justify-content: end;
 
-.tagsrating__stars--star.active {
-    width: 25px;
-    height: 24px;
-    color: $filledStar-color;
-    margin-left: 5px;
-}
-
-.tagsrating__stars--star.inactive {
-    width: 25px;
-    height: 24px;
-    color: $emptyStar-color;
-    margin-left: 5px;
+        &--star.active {
+            width: 25px;
+            height: 24px;
+            color: $filledStar-color;
+            margin-left: 5px;
+        }
+        
+        &--star.inactive {
+            width: 25px;
+            height: 24px;
+            color: $emptyStar-color;
+            margin-left: 5px;
+        }
+    }
 }
 
 /* ---------------------- INFORMATIONS DETAILLEES (Description et Equipements) ---------------------- */
@@ -163,41 +163,41 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
-}
 
-.description, .equipments {
-    display: flex;
-    flex-direction: column;
-    width: 47%;
-}
+    &__block {
+        display: flex;
+        flex-direction: column;
+        width: 47%;
 
-.bannerDetails {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: $blockT-color;
-    background: $blockB-color;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    border: none;
-}
+        &__banner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: $blockT-color;
+            background: $blockB-color;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
 
-.chevron {
-    width: 24px;
-    height: 13px;
-    background: none;
-    border: none;
-}
+            &--chevron {
+                width: 24px;
+                height: 13px;
+                background: none;
+                border: none;
+            }
+        }
 
-.description p {
-    color: $secondaryT-color;
-    font-weight: 400;
-    padding: 20px;
-}
-
-.listEquipment {
-    list-style: none;
-    padding: 20px;
+        &--description {
+            color: $secondaryT-color;
+            font-weight: 400;
+            padding: 20px;
+        }
+        
+        &--listEquipment {
+            list-style: none;
+            padding: 20px;
+        }
+    }
 }

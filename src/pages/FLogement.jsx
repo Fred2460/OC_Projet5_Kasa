@@ -42,24 +42,24 @@ function FLogement() {
 
   return (
     <div className='info'>
-      <div className='carouselContainer'> {/* carrousel */}
-        <button className='previousButton' onClick={prevImage}>
+      <div className='carousel'> {/* carrousel */}
+        <button className='carousel__previousButton' onClick={prevImage}>
           <img src={chevronLeft} alt='Chevron précédent' /> {/* chevron précédent */}
         </button>
-        <img className='carouselPicture' src={logement.pictures[currentIndex]} alt='carousel' />
-        <p className='slideIndex'>{currentIndex+1}/{logement.pictures.length}</p>
-        <button className='nextButton' onClick={nextImage}>
+        <img className='carousel__picture' src={logement.pictures[currentIndex]} alt='carousel' />
+        <p className='carousel__slideIndex'>{currentIndex+1}/{logement.pictures.length}</p>
+        <button className='carousel__nextButton' onClick={nextImage}>
           <img src={chevronRight} alt='Chevron suivant' /> {/* chevron suivant */}
         </button>
       </div>
-      <div className='title'> {/* informations principales du logement */}
-        <h1 className='title--main'>{logement.title}</h1>
-        <div className='title--host'>
+      <div className='identification'> {/* informations principales du logement */}
+        <h1 className='identification__title'>{logement.title}</h1>
+        <div className='identification__host'>
           <p>{logement.host.name}</p>
           <img src={logement.host.picture} alt='Host avatar' />
         </div>
       </div>
-      <div className='location'>
+      <div className='identification__location'>
         <p>{logement.location}</p>
       </div>
       <div className='tagsrating'>
@@ -77,26 +77,26 @@ function FLogement() {
         </div>
       </div>
       <div className="details"> {/* informations détaillées du logement */}
-        <article className="description"> {/* Description */}
-          <div className="bannerDetails">
+        <article className="details__block"> {/* Description */}
+          <div className="details__block__banner">
             Description
-            <button className="chevron" onClick={() => setOpenDescription(!openDescription)}>
+            <button className="details__block__banner--chevron" onClick={() => setOpenDescription(!openDescription)}>
               {openDescription ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
             </button>
           </div>
           <Collapse in={openDescription}>
-            <p>{logement.description}</p>
+            <p className="details__block--description">{logement.description}</p>
           </Collapse>
         </article>
-        <article className="equipments"> {/* Equipements */}
-          <div className="bannerDetails">
+        <article className="details__block"> {/* Equipements */}
+          <div className="details__block__banner">
             Équipements
-            <button className="chevron" onClick={() => setOpenEquipments(!openEquipments)}>
+            <button className="details__block__banner--chevron" onClick={() => setOpenEquipments(!openEquipments)}>
               {openEquipments ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
             </button>
           </div>
           <Collapse in={openEquipments}>
-            <ul className="listEquipment">
+            <ul className="details__block--listEquipment">
               {logement.equipments.map((equipment, index) => (
                 <li key={index}>{equipment}</li>
               ))}
