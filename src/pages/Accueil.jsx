@@ -1,10 +1,10 @@
 import pictureAccueil from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg';
-import '../styles/accueil.scss';
+import '../styles/main.scss';
 import Card from '../components/Card'
 
 function Accueil({ logements }) {
   return (
-    <div className="accueil">
+    <div className="main">
       <div className="banner bannerAccueil">
         <img src={pictureAccueil} className="bannerPicture" alt="Bord de mer" />
       </div>

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import WhiteLogo from '../assets/Logo_KasaWhite.png'
-import colors from '../styles/colors'
+import WhiteLogo from '../assets/logo_KasaWhite.png'
 
 const FooterLogo = styled.img`
   height: 40px;
@@ -13,8 +12,8 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${colors.textFooter};
-  background-color: ${colors.backgroundFooter};
+  color: #FFFFFF;
+  background-color: #000000;
   font-size: 24px;
   font-weight: 500;
 `

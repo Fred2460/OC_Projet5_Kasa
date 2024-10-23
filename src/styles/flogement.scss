@@ -1,3 +1,4 @@
+@import 'variables';
 
 :root {
     --textMain: #FF6060; /* Bittersweet*/
@@ -16,7 +17,7 @@
 .info {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat';
+    font-family: $font-family-base;
     font-weight: 500;
     margin: 30px 100px;
 }
@@ -36,11 +37,6 @@
     border-radius: 25px;
     object-fit: cover;
 }
-
-/*.carouselPicture::after {
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 25px;
-}*/
 
 .previousButton, .nextButton {
     position: absolute;
@@ -83,8 +79,7 @@
 
 .title--main {
     font-size: 36px;
-    font-family: 'Montserrat';
-    color: var(--textMain);
+    color: $primaryT-color;
     margin: 0;
 }
 
@@ -138,8 +133,8 @@
     font-size: 14px;
     font-weight: 700;
     text-align: center;
-    background: var(--backgroundBlock);
-    color: var(--textBlock);
+    background: $blockB-color;
+    color: $blockT-color;
     border-radius: 10px;
     padding: 3px 22px 3px 22px; 
 }
@@ -151,14 +146,14 @@
 .tagsrating__stars--star.active {
     width: 25px;
     height: 24px;
-    color:#FF6060;
+    color: $filledStar-color;
     margin-left: 5px;
 }
 
 .tagsrating__stars--star.inactive {
     width: 25px;
     height: 24px;
-    color:#E3E3E3;
+    color: $emptyStar-color;
     margin-left: 5px;
 }
 
@@ -180,11 +175,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: white;
-    background: #FF6060;
+    color: $blockT-color;
+    background: $blockB-color;
     padding: 10px 20px;
     border-radius: 10px;
-    font-family: 'Montserrat';
     font-size: 18px;
     font-weight: 700;
     border: none;
@@ -198,8 +192,7 @@
 }
 
 .description p {
-    color:#000000;
-    font-family: 'Montserrat';
+    color: $secondaryT-color;
     font-weight: 400;
     padding: 20px;
 }

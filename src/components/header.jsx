@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import colors from '../styles/colors'
-import PinkLogo from '../assets/Logo_KasaPink.png'
+import PinkLogo from '../assets/logo_KasaPink.png'
 
 const HomeLogo = styled.img`
   height: 70px;
@@ -12,14 +11,14 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${colors.backgroundMain};
+  background-color: #FFFFFF;
   margin-left: 100px;
   margin-right: 100px;
 `
 
 const StyledLink = styled(NavLink)`
   padding: 10px 15px;
-  color: ${colors.textLow};
+  color: #000000;
   text-decoration: none;
   font-size: 24px;
   text-align: center;

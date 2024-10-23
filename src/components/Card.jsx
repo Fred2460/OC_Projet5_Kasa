@@ -1,10 +1,9 @@
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import colors from "../styles/colors"
-import "../styles/accueil.scss"
+import "../styles/main.scss"
 
 const CardTitle = styled.span`
-  color: ${colors.textBlock};
+  color: #FFFFFF;
   font-size: 18px;
   font-weight: 700;
   margin: 20px;
@@ -29,16 +28,6 @@ function HandleClick(id) {
   window.location.href=`/FLogement/${id}`
 }
 
-function Card({ id, title }) {
-  
-
-  return (
-    <CardWrapper onClick={() => HandleClick(id)}>
-      <CardTitle>{title}</CardTitle>
-    </CardWrapper>
-  )
-}
-
 Card.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
@@ -47,6 +36,15 @@ Card.propTypes = {
 Card.defaultProps = {
   id: '',
   title: ''
+}
+
+function Card({ id, title }) {
+  
+  return (
+    <CardWrapper onClick={() => HandleClick(id)}>
+      <CardTitle>{title}</CardTitle>
+    </CardWrapper>
+  )
 }
 
 export default Card
