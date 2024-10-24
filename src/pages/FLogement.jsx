@@ -42,41 +42,51 @@ function FLogement() {
 
   return (
     <div className='info'>
-      <div className='carousel'> {/* carrousel */}
+
+      {/* carrousel */}
+      <div className='carousel'>
         <button className='carousel__previousButton' onClick={prevImage}>
-          <img src={chevronLeft} alt='Chevron précédent' /> {/* chevron précédent */}
+          <img className='carousel__previousButton--img' src={chevronLeft} alt='Chevron précédent' /> {/* chevron précédent */}
         </button>
         <img className='carousel__picture' src={logement.pictures[currentIndex]} alt='carousel' />
         <p className='carousel__slideIndex'>{currentIndex+1}/{logement.pictures.length}</p>
         <button className='carousel__nextButton' onClick={nextImage}>
-          <img src={chevronRight} alt='Chevron suivant' /> {/* chevron suivant */}
+          <img className='carousel__nextButton--img' src={chevronRight} alt='Chevron suivant' /> {/* chevron suivant */}
         </button>
       </div>
-      <div className='identification'> {/* informations principales du logement */}
-        <h1 className='identification__title'>{logement.title}</h1>
-        <div className='identification__host'>
-          <p>{logement.host.name}</p>
-          <img src={logement.host.picture} alt='Host avatar' />
+
+      {/* informations principales du logement */}
+      <div className="infoBlock">
+        <div className='identification'> 
+          <h1 className='identification__title'>{logement.title}</h1>
+          <p className='identification__location'>{logement.location}</p>
+          <div className='identification__tags'> {/* tags du logement */}
+            {logement.tags.map((tag, index) => (
+              <p key={index} className={tag !== undefined ? 'identification__tags--tag' : ''}>
+                {tag}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        {/* complément: host et rating */}
+        <div className="additional">
+          <div className='additional__host'> {/* identification host */}
+            <p className='additional__host--name'>{logement.host.name}</p>
+            <img className='additional__host--img' src={logement.host.picture} alt='Host avatar' />
+          </div>
+          <div className='additional__rating'>
+            <div className='additional__rating--stars'> {/* rating du logement */}
+              {[...Array(5)].map((_, index) => (
+                <FontAwesomeIcon key={index} icon={faStar} className={parseInt(logement.rating) >= index + 1 ? 'additional__rating--stars active' : 'additional__rating--stars inactive'} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-      <div className='identification__location'>
-        <p>{logement.location}</p>
-      </div>
-      <div className='tagsrating'>
-        <div className='tagsrating__tags'> {/* tags du logement */}
-          {logement.tags.map((tag, index) => (
-            <p key={index} className={tag !== undefined ? 'tagsrating__tags--tag' : ''}>
-              {tag}
-            </p>
-          ))}
-        </div>
-        <div className='tagsrating__stars'> {/* rating du logement */}
-          {[...Array(5)].map((_, index) => (
-            <FontAwesomeIcon key={index} icon={faStar} className={parseInt(logement.rating) >= index + 1 ? 'tagsrating__stars--star active' : 'tagsrating__stars--star inactive'} />
-          ))}
-        </div>
-      </div>
-      <div className="details"> {/* informations détaillées du logement */}
+
+      {/* informations détaillées du logement */}
+      <div className="details">
         <article className="details__block"> {/* Description */}
           <div className="details__block__banner">
             Description

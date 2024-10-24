@@ -21,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
       margin: 0px;
       padding: 0px;
     }
+
+
 `
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

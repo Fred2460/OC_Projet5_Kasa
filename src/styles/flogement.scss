@@ -5,7 +5,15 @@
     flex-direction: column;
     font-family: $font-family-base;
     font-weight: 500;
-    margin: 30px 100px;
+    margin: 10px 100px 30px 100px;
+
+    @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+        margin: 8px 50px 15px 50px;
+    }
+        
+    @media (max-width: $breakpoint-mobile) {
+        margin: 5px 20px 10px 20px;
+    }
 }
 
 /* -------------------------- CARROUSEL ------------------ */
@@ -16,6 +24,14 @@
     width: 100%;
     height: 415px;
     margin-bottom: 20px;
+
+    @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+        height: 335px;
+    }
+    
+    @media (max-width: $breakpoint-mobile) {
+        height: 255px;
+    }
 
     &__picture {
         width: 100%;
@@ -34,14 +50,55 @@
         border: none;
         padding: 20px;
         cursor: pointer;
+
+        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+            width: 60px;
+            padding: 10px;
+        }
+            
+        @media (max-width: $breakpoint-mobile) {
+            width: 24px;
+            padding: 5px;
+        }
+    }
+
+    &__previousButton--img, &__nextButton--img {
+        width: 47px;
+        height: 80px;
+
+        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+            width: 30px;
+            height: 50px;
+        }
+            
+        @media (max-width: $breakpoint-mobile) {
+            width: 12px;
+            height: 20px;
+        }
     }
 
     &__previousButton {
         left: 10px;
+
+        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+            left: 7px;
+        }
+            
+        @media (max-width: $breakpoint-mobile) {
+            left: 4px;
+        }
     }
       
     &__nextButton {
         right: 10px;
+
+        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+            right: 7px;
+        }
+            
+        @media (max-width: $breakpoint-mobile) {
+            right: 4px;
+        }
     }
 
     &__slideIndex {
@@ -57,61 +114,83 @@
 }
 
 /* ---------------------------- TITRE ET INFORMATIONS GENERALES --------------- */
-.identification {
+.infoBlock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    margin-top: 5px;
+
+    @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+        flex-direction: column;
+
+    }
+        
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+    }
+}
+
+.identification {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+
+    @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+        width: 100%;
+    }
+        
+    @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+    }
 
     &__title {
         font-size: 36px;
         color: $primaryT-color;
         margin: 0;
-    }
 
-    &__host {
-        display: flex;
-        justify-content: end;
-        gap: 10px;
-        font-size: 18px;
-        align-items: center;
-        width: 93px;
-    }
-
-    &__host p {
-        margin: 0;
-        text-align: end;
-    }
-    
-    &__host img {
-        width: 64px;
-        height: 64px;
-        border-radius: 32px;
+        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+            font-size: 26px;
+        }
+            
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 18px;
+        }
     }
 
     &__location {
         flex-direction: row;
         justify-content: start;
         font-size: 18px;
-    }
-    
-    &__location p {
-        margin: 0;
-    }
-}
 
-/* -------------------------- TAGS ET RATING -------------------------- */
-.tagsrating {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 15px;
+        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+            font-size: 16px;
+        }
+            
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 14px;
+        }
+    }
 
     &__tags {
-        gap: 10px;
         display: flex;
+        flex-direction: row;
         justify-content: start;
+        margin-top: 15px;
+        gap: 10px;
 
+        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+            flex-wrap: wrap;
+            row-gap: 0;
+            
+        }
+            
+        @media (max-width: $breakpoint-mobile) {
+            flex-wrap: wrap;
+            row-gap: 0;
+        }
+    
         &--tag {
             border: none;
             font-size: 14px;
@@ -123,22 +202,76 @@
             padding: 3px 22px 3px 22px; 
         }
     }
+}
 
-    &__stars {
+/* -------------------------- TAGS ET RATING -------------------------- */
+.additional {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 20%;
+    gap: 30px;
+    
+    @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+        
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__host {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+
+        &--name {
+            font-size: 18px;
+            color: $primaryT-color;
+            margin: 0;
+            text-align: end;
+            width: 93px;
+        }
+            
+        &--img {
+            width: 64px;
+            height: 64px;
+            border-radius: 32px;
+        }
+    }
+
+    &__rating {
+        display: flex;
+        flex-direction: row;
         justify-content: end;
 
-        &--star.active {
-            width: 25px;
+        &--stars {
+            //width: 25px;
             height: 24px;
-            color: $filledStar-color;
             margin-left: 5px;
+
+            @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+                height: 20px;               
+            }
+                
+            @media (max-width: $breakpoint-mobile) {
+                height: 13px;
+            }
+        }
+
+        &--stars .active {
+            color: $filledStar-color;
         }
         
-        &--star.inactive {
-            width: 25px;
-            height: 24px;
+        &--stars .inactive {
             color: $emptyStar-color;
-            margin-left: 5px;
         }
     }
 }
@@ -149,11 +282,20 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
+        
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+    }
 
     &__block {
         display: flex;
         flex-direction: column;
         width: 47%;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            margin-bottom: 25px;
+        }
 
         &__banner {
             display: flex;
@@ -167,11 +309,29 @@
             font-weight: 700;
             border: none;
 
+            @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+                font-size: 16px;
+            }
+                
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 13px;
+            }
+
             &--chevron {
                 width: 24px;
                 height: 13px;
                 background: none;
                 border: none;
+
+                @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+                    width: 20px;
+                    height: 11px;
+                }
+                    
+                @media (max-width: $breakpoint-mobile) {
+                    width: 16px;
+                    height: 9px;
+                }
             }
         }
 
@@ -179,11 +339,31 @@
             color: $secondaryT-color;
             font-weight: 400;
             padding: 20px;
+
+            @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+                font-size: 14px;
+                padding: 15px;
+            }
+                
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 12px;
+                padding: 10px;
+            }
         }
         
         &--listEquipment {
             list-style: none;
             padding: 20px;
+
+            @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+                font-size: 14px;
+                padding: 15px;
+            }
+                
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 12px;
+                padding: 10px;
+            }
         }
     }
 }

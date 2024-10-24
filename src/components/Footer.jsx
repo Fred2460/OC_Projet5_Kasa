@@ -16,6 +16,12 @@ const FooterContainer = styled.footer`
   background-color: #000000;
   font-size: 24px;
   font-weight: 500;
+  gap: 30px;
+
+  @media(max-width: 480px) {
+    font-size: 12px;
+    gap: 10px;
+  }
 `
 
 function Footer() {
