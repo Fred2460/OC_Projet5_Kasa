@@ -87,7 +87,9 @@ function FLogement() {
 
       {/* informations détaillées du logement */}
       <div className="details">
-        <article className="details__block"> {/* Description */}
+
+        {/* Description */}
+        <article className="details__block">
           <div className="details__block__banner">
             Description
             <button className="details__block__banner--chevron" onClick={() => setOpenDescription(!openDescription)}>
@@ -98,7 +100,9 @@ function FLogement() {
             <p className="details__block--description">{logement.description}</p>
           </Collapse>
         </article>
-        <article className="details__block"> {/* Equipements */}
+        
+        {/* Equipements */}
+        <article className="details__block">
           <div className="details__block__banner">
             Équipements
             <button className="details__block__banner--chevron" onClick={() => setOpenEquipments(!openEquipments)}>

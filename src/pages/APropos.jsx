@@ -18,7 +18,9 @@ function APropos() {
         <img src={pictureAPropos} className="banner__Picture" alt="Bord de mer" />
       </div>
       <div className="valeurs">
-        <article> {/* Valeur : Fiabilité */}
+
+        {/* Valeur : Fiabilité */}
+        <article>
           <div className="valeurs__banner">
             Fiabilité
             <button className="valeurs__banner--chevron" onClick={() => setOpenFiabilite(!openFiabilite)}>
@@ -30,7 +32,9 @@ function APropos() {
               et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
           </Collapse>
         </article>
-        <article> {/* Valeur : Respect */}
+        
+        {/* Valeur : Respect */}
+        <article>
           <div className="valeurs__banner">
             Respect
             <button className="valeurs__banner--chevron" onClick={() => setOpenRespect(!openRespect)}>
@@ -42,7 +46,9 @@ function APropos() {
                  du voisinage entraînera une exclusion de notre plateforme</p>
           </Collapse>
         </article>
-        <article> {/* Valeur : Service */}
+
+        {/* Valeur : Service */}
+        <article>
           <div className="valeurs__banner">
             Service
             <button className="valeurs__banner--chevron" onClick={() => setOpenService(!openService)}>
@@ -54,7 +60,9 @@ function APropos() {
               que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.</p>
           </Collapse>
         </article>
-        <article> {/* Valeur : Sécurité */}
+        
+        {/* Valeur : Sécurité */}
+        <article>
           <div className="valeurs__banner">
             Sécurité
             <button className="valeurs__banner--chevron" onClick={() => setOpenSecurite(!openSecurite)}>
