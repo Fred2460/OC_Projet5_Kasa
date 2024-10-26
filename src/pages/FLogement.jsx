@@ -4,10 +4,10 @@ import logementsData from '../datas/logements.json'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react';
 // pour le carrousel
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import chevronLeft from '../assets/chevronLeft.png'
-import chevronRight from '../assets/chevronRight.png'
+//import { FontAwesomeIcon } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
+import { IoChevronBackSharp } from "react-icons/io5";
+import { IoChevronForwardSharp } from "react-icons/io5";
 // pour l'affichage du détails des informations du logement
 import chevronDown from '../assets/chevronDown.png'
 import chevronUp from '../assets/chevronUp.png'
@@ -46,12 +46,12 @@ function FLogement() {
       {/* carrousel */}
       <div className='carousel'>
         <button className='carousel__previousButton' onClick={prevImage}>
-          <img className='carousel__previousButton--img' src={chevronLeft} alt='Chevron précédent' /> {/* chevron précédent */}
+          <IoChevronBackSharp className='carousel__previousButton--icone' /> {/* chevron précédent */}
         </button>
         <img className='carousel__picture' src={logement.pictures[currentIndex]} alt='carousel' />
         <p className='carousel__slideIndex'>{currentIndex+1}/{logement.pictures.length}</p>
         <button className='carousel__nextButton' onClick={nextImage}>
-          <img className='carousel__nextButton--img' src={chevronRight} alt='Chevron suivant' /> {/* chevron suivant */}
+          <IoChevronForwardSharp className='carousel__nextButton--icone' /> {/* chevron suivant */}
         </button>
       </div>
 
@@ -78,7 +78,7 @@ function FLogement() {
           <div className='additional__rating'>
             <div className='additional__rating--stars'> {/* rating du logement */}
               {[...Array(5)].map((_, index) => (
-                <FontAwesomeIcon key={index} icon={faStar} className={parseInt(logement.rating) >= index + 1 ? 'additional__rating--stars active' : 'additional__rating--stars inactive'} />
+                <FaStar key={index} className={parseInt(logement.rating) >= index + 1 ? 'additional__rating--stars active' : 'additional__rating--stars inactive'} />
               ))}
             </div>
           </div>

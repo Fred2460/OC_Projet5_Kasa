@@ -62,42 +62,39 @@
         }
     }
 
-    &__previousButton--img, &__nextButton--img {
-        width: 47px;
-        height: 80px;
-
+    &__previousButton--icone, &__nextButton--icone {
+        font-size: 120px;
+        
         @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-            width: 30px;
-            height: 50px;
+            font-size: 75px;
         }
             
         @media (max-width: $breakpoint-mobile) {
-            width: 12px;
-            height: 20px;
+            font-size: 30px;
         }
     }
 
     &__previousButton {
-        left: 10px;
+        left: -30px;
 
         @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-            left: 7px;
+            left: -17px;
         }
             
         @media (max-width: $breakpoint-mobile) {
-            left: 4px;
+            left: -5px;
         }
     }
       
     &__nextButton {
-        right: 10px;
+        right: 30px;
 
         @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-            right: 7px;
+            right: 20px;
         }
             
         @media (max-width: $breakpoint-mobile) {
-            right: 4px;
+            right: 10px;
         }
     }
 
@@ -177,7 +174,6 @@
         display: flex;
         flex-direction: row;
         justify-content: start;
-        margin-top: 15px;
         gap: 10px;
 
         @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
@@ -215,6 +211,7 @@
     @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
         flex-direction: row-reverse;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         margin-bottom: 10px;
     }
@@ -222,6 +219,7 @@
     @media (max-width: $breakpoint-mobile) {
         flex-direction: row-reverse;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         margin-bottom: 10px;
     }
@@ -250,18 +248,18 @@
     &__rating {
         display: flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content: center;
 
         &--stars {
-            height: 24px;
+            font-size: 27px;
             margin-left: 5px;
 
             @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-                height: 20px;               
+                font-size: 21px;
             }
                 
             @media (max-width: $breakpoint-mobile) {
-                height: 13px;
+                font-size: 15px;
             }
         }
 
