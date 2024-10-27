@@ -10,11 +10,6 @@ Card.propTypes = {
   title: PropTypes.string.isRequired
 }
 
-/*Card.defaultProps = {
-  id: '',
-  title: ''
-}*/
-
 function Card({ id = "", title = "" }) {
   
   return (
