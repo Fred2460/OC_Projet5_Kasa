@@ -9,8 +9,8 @@ import { FaStar } from 'react-icons/fa'
 import { IoChevronBackSharp } from "react-icons/io5";
 import { IoChevronForwardSharp } from "react-icons/io5";
 // pour l'affichage du détails des informations du logement
-import chevronDown from '../assets/chevronDown.png'
-import chevronUp from '../assets/chevronUp.png'
+import { IoChevronUp } from "react-icons/io5";
+import { IoChevronDown } from "react-icons/io5";
 import { Collapse } from 'react-bootstrap'
 
 function FLogement() {
@@ -93,7 +93,7 @@ function FLogement() {
           <div className="details__block__banner">
             Description
             <button className="details__block__banner--chevron" onClick={() => setOpenDescription(!openDescription)}>
-              {openDescription ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+              {openDescription ? <IoChevronDown /> : <IoChevronUp />}
             </button>
           </div>
           <Collapse in={openDescription}>
@@ -106,7 +106,7 @@ function FLogement() {
           <div className="details__block__banner">
             Équipements
             <button className="details__block__banner--chevron" onClick={() => setOpenEquipments(!openEquipments)}>
-              {openEquipments ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+              {openEquipments ? <IoChevronDown /> : <IoChevronUp />}
             </button>
           </div>
           <Collapse in={openEquipments}>

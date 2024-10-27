@@ -1,8 +1,8 @@
 import pictureAPropos from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import '../styles/main.scss'
 import { useState } from 'react'
-import chevronDown from '../assets/chevronDown.png'
-import chevronUp from '../assets/chevronUp.png'
+import { IoChevronUp } from "react-icons/io5";
+import { IoChevronDown } from "react-icons/io5";
 import { Collapse } from 'react-bootstrap'
 
 function APropos() {
@@ -24,7 +24,7 @@ function APropos() {
           <div className="valeurs__banner">
             Fiabilité
             <button className="valeurs__banner--chevron" onClick={() => setOpenFiabilite(!openFiabilite)}>
-              {openFiabilite ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+              {openFiabilite ? <IoChevronDown /> : <IoChevronUp />}
             </button>
           </div>
           <Collapse in={openFiabilite}>
@@ -38,7 +38,7 @@ function APropos() {
           <div className="valeurs__banner">
             Respect
             <button className="valeurs__banner--chevron" onClick={() => setOpenRespect(!openRespect)}>
-              {openRespect ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+              {openRespect ? <IoChevronDown /> : <IoChevronUp />}
             </button>
           </div>
           <Collapse in={openRespect}>
@@ -52,7 +52,7 @@ function APropos() {
           <div className="valeurs__banner">
             Service
             <button className="valeurs__banner--chevron" onClick={() => setOpenService(!openService)}>
-              {openService ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+              {openService ? <IoChevronDown /> : <IoChevronUp />}
             </button>
           </div>
           <Collapse in={openService}>
@@ -66,7 +66,7 @@ function APropos() {
           <div className="valeurs__banner">
             Sécurité
             <button className="valeurs__banner--chevron" onClick={() => setOpenSecurite(!openSecurite)}>
-              {openSecurite ? <img src={chevronDown} alt="Chevron fermé" /> : <img src={chevronUp} alt="Chevron ouvert" />}
+              {openSecurite ? <IoChevronDown /> : <IoChevronUp />}
             </button>
           </div>
           <Collapse in={openSecurite}>

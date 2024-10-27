@@ -11,6 +11,7 @@ function Accueil({ logements }) {
       <div className="gallery">
         {logements.map((logement) => (
           <Card
+            key={logement.id}
             id={logement.id}
             title={logement.title}
           />

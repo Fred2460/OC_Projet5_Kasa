@@ -167,9 +167,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     color: $blockT-color;
     background: $blockB-color;
-    padding: 8px 20px;
+    padding: 5px 20px;
     border-radius: 10px;
     font-size: 24px;
     font-weight: 700;
@@ -188,19 +189,17 @@
     }
 
     &--chevron {
-      width: 24px;
-      height: 14px;
+      font-size: 35px;
+      color: $blockT-color;
       background: none;
       border: none;
 
       @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-        width: 20px;
-        height: 12px;
+        font-size: 30px;
       }
       
       @media (max-width: $breakpoint-mobile) {
-        width: 16px;
-        height: 9px;
+        font-size: 23px;
       }
     }
 

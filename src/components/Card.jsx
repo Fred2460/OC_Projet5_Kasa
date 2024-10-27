@@ -10,12 +10,12 @@ Card.propTypes = {
   title: PropTypes.string.isRequired
 }
 
-Card.defaultProps = {
+/*Card.defaultProps = {
   id: '',
   title: ''
-}
+}*/
 
-function Card({ id, title }) {
+function Card({ id = "", title = "" }) {
   
   return (
     <div className="gallery__card" onClick={() => HandleClick(id)}>
