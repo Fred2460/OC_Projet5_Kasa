@@ -45,12 +45,12 @@ function FLogement() {
 
       {/* carrousel */}
       <div className='carousel'>
-        <button className='carousel__previousButton' onClick={prevImage}>
+        <button className={ (logement.pictures.length) > 1 ? 'carousel__previousButton--active' : 'carousel__previousButton--inactive'} onClick={prevImage}>
           <IoChevronBackSharp className='carousel__previousButton--icone' /> {/* chevron précédent */}
         </button>
         <img className='carousel__picture' src={logement.pictures[currentIndex]} alt='carousel' />
-        <p className='carousel__slideIndex'>{currentIndex+1}/{logement.pictures.length}</p>
-        <button className='carousel__nextButton' onClick={nextImage}>
+        <p className={ (logement.pictures.length) > 1 ? 'carousel__slideIndex--active' : 'carousel__slideIndex--inactive'} >{currentIndex+1}/{logement.pictures.length}</p>
+        <button className={ (logement.pictures.length) > 1 ? 'carousel__nextButton--active' : 'carousel__nextButton--inactive'} onClick={nextImage}>
           <IoChevronForwardSharp className='carousel__nextButton--icone' /> {/* chevron suivant */}
         </button>
       </div>

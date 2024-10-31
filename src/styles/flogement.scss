@@ -40,7 +40,7 @@
         object-fit: cover;
     }
 
-    &__previousButton, &__nextButton {
+    &__previousButton--active, &__nextButton--active {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -62,6 +62,10 @@
         }
     }
 
+    &__previousButton--inactive, &__nextButton--inactive {
+        display: none;
+    }
+
     &__previousButton--icone, &__nextButton--icone {
         font-size: 120px;
         
@@ -74,7 +78,7 @@
         }
     }
 
-    &__previousButton {
+    &__previousButton--active {
         left: -30px;
 
         @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
@@ -86,7 +90,7 @@
         }
     }
       
-    &__nextButton {
+    &__nextButton--active {
         right: 30px;
 
         @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
@@ -98,7 +102,7 @@
         }
     }
 
-    &__slideIndex {
+    &__slideIndex--active {
         position: absolute;
         bottom: 0px;
         left: 50%;
@@ -107,6 +111,10 @@
         font-size: 16px;
         font-weight: 500;
         border-radius: 5px;
+    }
+
+    &__slideIndex--inactive {
+        display: none;
     }
 }
 
@@ -208,6 +216,7 @@
     width: 20%;
     gap: 30px;
     
+    
     @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -252,10 +261,10 @@
 
         &--stars {
             font-size: 27px;
-            margin-left: 5px;
+            margin-left: 4px;
 
             @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-                font-size: 21px;
+                font-size: 27px;
             }
                 
             @media (max-width: $breakpoint-mobile) {
@@ -279,9 +288,11 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
+    margin-bottom: 10px;
         
     @media (max-width: $breakpoint-mobile) {
         flex-direction: column;
+        margin-bottom: 0;
     }
 
     &__block {
@@ -306,6 +317,8 @@
             font-size: 18px;
             font-weight: 700;
             border: none;
+            z-index: 1;
+            position: relative;
 
             @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
                 font-size: 16px;
@@ -335,33 +348,47 @@
         }
 
         &--description {
+            min-height: 280px;
             color: $secondaryT-color;
             font-weight: 400;
-            padding: 20px;
+            padding: 30px 20px 20px 20px;
+            background-color: $secondaryB-color;
+            margin-top: -10px;
+            border-radius: 5px;
+            z-index: 0;
+            position: relative;
 
             @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
                 font-size: 14px;
-                padding: 15px;
+                padding: 25px 15px 15px 15px;
             }
                 
             @media (max-width: $breakpoint-mobile) {
                 font-size: 12px;
-                padding: 10px;
+                padding: 20px 10px 10px 10px;
+                min-height: auto;
             }
         }
         
         &--listEquipment {
             list-style: none;
-            padding: 20px;
+            min-height: 280px;
+            padding: 30px 20px 20px 20px;
+            background-color: $secondaryB-color;
+            margin-top: -10px;
+            border-radius: 5px;
+            z-index: 0;
+            position: relative;
 
             @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
                 font-size: 14px;
-                padding: 15px;
+                padding: 25px 15px 15px 15px;
             }
                 
             @media (max-width: $breakpoint-mobile) {
                 font-size: 12px;
-                padding: 10px;
+                padding: 20px 10px 10px 10px;
+                min-height: auto;
             }
         }
     }
