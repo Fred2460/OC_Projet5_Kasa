@@ -127,13 +127,13 @@
     flex-direction: column;
     justify-content: end;
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%),
-      $blockB-color;
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
     width: 100%;
     aspect-ratio: 1 / 1;
     transition: 200ms;
     cursor: pointer;
+    z-index: 1;
 
     &--cover {
       position: absolute;
@@ -141,14 +141,17 @@
       height: 100%;
       border-radius: 10px;
       object-fit: cover;
+      z-index: 0;
     }
 
     &--title {
+      position: relative;
       color: $blockT-color;
       font-size: 18px;
       font-weight: 700;
       margin: 20px;
       text-align: left;
+      z-index: 2;
     }
   }
 }

@@ -7,16 +7,17 @@ function HandleClick(id) {
 
 Card.propTypes = {
   id: PropTypes.string.isRequired,
-  cover: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired
+  
 }
 
-function Card({ id = "", cover = "", title = "" }) {
+function Card({ id = "", title = "", cover = "" }) {
   
   return (
     <div className="gallery__card" onClick={() => HandleClick(id)}>
-      <img src={cover} className="gallery__card--cover" alt="Bord de mer" />
       <p className="gallery__card--title">{title}</p>
+      <img src={cover} className="gallery__card--cover" alt="Bord de mer" />
     </div>
   )
 }
