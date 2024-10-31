@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 import createGlobalStyle from 'styled-components'
 import './styles/index.scss';
 import logementsData from './datas/logements.json'
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GlobalStyle = createGlobalStyle`
     * {

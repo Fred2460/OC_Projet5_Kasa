@@ -1,79 +1,44 @@
 import pictureAPropos from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import '../styles/main.scss'
-import { useState } from 'react'
-import { IoChevronUp } from "react-icons/io5";
-import { IoChevronDown } from "react-icons/io5";
-import { Collapse } from 'react-bootstrap'
+import Collapse from '../components/Collapse'
 
 function APropos() {
-  /*gestion du détails des informations sur le logement - boutons 'collapse' */
-  const [openFiabilite, setOpenFiabilite] = useState(false)
-  const [openRespect, setOpenRespect] = useState(false)
-  const [openService, setOpenService] = useState(false)
-  const [openSecurite, setOpenSecurite] = useState(false)
 
   return (
     <div className="main">
       <div className="banner banner__APropos">
         <img src={pictureAPropos} className="banner__Picture" alt="Bord de mer" />
       </div>
+      
       <div className="valeurs">
 
-        {/* Valeur : Fiabilité */}
         <article>
-          <div className="valeurs__banner">
-            Fiabilité
-            <button className="valeurs__banner--chevron" onClick={() => setOpenFiabilite(!openFiabilite)}>
-              {openFiabilite ? <IoChevronDown /> : <IoChevronUp />}
-            </button>
-          </div>
-          <Collapse in={openFiabilite}>
-            <p className="valeurs__banner--text">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, 
-              et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
-          </Collapse>
-        </article>
-        
-        {/* Valeur : Respect */}
-        <article>
-          <div className="valeurs__banner">
-            Respect
-            <button className="valeurs__banner--chevron" onClick={() => setOpenRespect(!openRespect)}>
-              {openRespect ? <IoChevronDown /> : <IoChevronUp />}
-            </button>
-          </div>
-          <Collapse in={openRespect}>
-            <p className="valeurs__banner--text">La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation
-                 du voisinage entraînera une exclusion de notre plateforme</p>
+          <Collapse title="Fiabilité">
+            <span>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, 
+              et toutes les informations sont régulièrement vérifiées par nos équipes.</span>
           </Collapse>
         </article>
 
-        {/* Valeur : Service */}
         <article>
-          <div className="valeurs__banner">
-            Service
-            <button className="valeurs__banner--chevron" onClick={() => setOpenService(!openService)}>
-              {openService ? <IoChevronDown /> : <IoChevronUp />}
-            </button>
-          </div>
-          <Collapse in={openService}>
-            <p className="valeurs__banner--text">La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, 
-              que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.</p>
+          <Collapse title="Respect">
+            <span>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation 
+              du voisinage entraînera une exclusion de notre plateforme.</span>
           </Collapse>
         </article>
         
-        {/* Valeur : Sécurité */}
         <article>
-          <div className="valeurs__banner">
-            Sécurité
-            <button className="valeurs__banner--chevron" onClick={() => setOpenSecurite(!openSecurite)}>
-              {openSecurite ? <IoChevronDown /> : <IoChevronUp />}
-            </button>
-          </div>
-          <Collapse in={openSecurite}>
-            <p className="valeurs__banner--text">La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond 
-            aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela 
-            permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur 
-            la sécurité domestique pour nos hôtes.</p>
+          <Collapse title="Service">
+            <span>La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, 
+              que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.</span>
+          </Collapse>
+        </article>
+        
+        <article>
+          <Collapse title="Sécurité">
+            <span>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond 
+              aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela 
+              permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur 
+              la sécurité domestique pour nos hôtes.</span>
           </Collapse>
         </article>
       </div>

@@ -155,87 +155,21 @@
 
 /* ------------------ CSS pour page A PROPOS ----------------------- */
 .valeurs {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 5px;;
-  margin-bottom: 40px;
+  margin: 40px 120px 40px 120px;
+  gap: 30px;
 
   @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 30px 60px 30px 60px;
+    gap: 30px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  &__banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: $blockT-color;
-    background: $blockB-color;
-    padding: 5px 20px;
-    border-radius: 10px;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-    width: 100%;
-    margin-top: 30px;
-    position: relative;
-    z-index: 1;
-
-    @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-      font-size: 18px;
-      margin-top: 25px;
-    }
-    
-    @media (max-width: $breakpoint-mobile) {
-      font-size: 13px;
-      margin-top: 20px;
-    }
-
-    &--chevron {
-      font-size: 35px;
-      color: $blockT-color;
-      background: none;
-      border: none;
-
-      @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-        font-size: 30px;
-      }
-      
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 23px;
-      }
-    }
-
-    &--text {
-      color: $secondaryT-color;
-      font-size: 18px;
-      font-weight: 400;
-      padding: 20px;
-      text-align: left;
-      background-color: $secondaryB-color;
-      margin-top: -10px;
-      border-radius: 5px;
-      position: relative;
-      z-index: 0;
-
-      @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-        font-size: 15px;
-        padding: 20px 15px 15px 15px;
-      }
-          
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 12px;
-        padding: 20px 10px 10px 10px;
-      }
-    }
+    margin: 25px 0 25px 0;
+    gap: 25px;
   }
 }
 
