@@ -4,16 +4,12 @@ import logementsData from '../datas/logements.json'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react';
 // pour le carrousel
-//import { FontAwesomeIcon } from 'react-icons/fa'
 import { FaStar } from 'react-icons/fa'
 import { IoChevronBackSharp } from "react-icons/io5";
 import { IoChevronForwardSharp } from "react-icons/io5";
 // pour l'affichage du détails des informations du logement
-import { IoChevronUp } from "react-icons/io5";
-import { IoChevronDown } from "react-icons/io5";
 
 import Collapse from '../components/Collapse'
-//import { Collapse } from 'react-bootstrap'
 
 function FLogement() {
   /* récupération de l'id et des informations du logement sélectionné */
@@ -32,10 +28,6 @@ function FLogement() {
       prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
     )
   }
-
-  /*gestion du détails des informations sur le logement - boutons 'collapse' */
-  const [openDescription, setOpenDescription] = useState(false);
-  const [openEquipments, setOpenEquipments] = useState(false);
 
   /* gestion du cas où le logement de l'id sélectionné n'existe pas */
   if (!logement) {
@@ -89,7 +81,6 @@ function FLogement() {
 
       {/* informations détaillées du logement */}
       <div className="details">
-        
           <article className="details__block">
             <Collapse title="Description">
               <span>{logement.description}</span>
@@ -105,40 +96,10 @@ function FLogement() {
               </span>
             </Collapse>
           </article>
-        
       </div>
     </div>
   )
 }
 
-/*
-        <article className="details__block">
-          <div className="details__block__banner">
-            Description
-            <button className="details__block__banner--chevron" onClick={() => setOpenDescription(!openDescription)}>
-              {openDescription ? <IoChevronDown /> : <IoChevronUp />}
-            </button>
-          </div>
-          <Collapse in={openDescription}>
-            <p className="details__block--description">{logement.description}</p>
-          </Collapse>
-        </article>
-        
-        <article className="details__block">
-          <div className="details__block__banner">
-            Équipements
-            <button className="details__block__banner--chevron" onClick={() => setOpenEquipments(!openEquipments)}>
-              {openEquipments ? <IoChevronDown /> : <IoChevronUp />}
-            </button>
-          </div>
-          <Collapse in={openEquipments}>
-            <ul className="details__block--listEquipment">
-              {logement.equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
-              ))}
-            </ul>
-          </Collapse>
-        </article>
-*/
 export default FLogement
   
