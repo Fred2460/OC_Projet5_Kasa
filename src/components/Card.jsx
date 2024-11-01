@@ -16,8 +16,9 @@ function Card({ id = "", title = "", cover = "" }) {
   
   return (
     <div className="gallery__card" onClick={() => HandleClick(id)}>
+      <div className="gallery__card--overlay"></div>
+      <img src={cover} className="gallery__card--cover" alt="Apperçu du logement" />
       <p className="gallery__card--title">{title}</p>
-      <img src={cover} className="gallery__card--cover" alt="Bord de mer" />
     </div>
   )
 }

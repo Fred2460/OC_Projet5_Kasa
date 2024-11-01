@@ -21,6 +21,4 @@ function Collapse ({ title, children }) {
     );
 }
 
-//<span>{isOpen ? '▲' : '▼'}</span>
-
 export default Collapse;

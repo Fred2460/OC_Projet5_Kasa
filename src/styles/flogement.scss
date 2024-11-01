@@ -1,3 +1,5 @@
+/* ****************** Style pour la page FICHE LOGEMENT ********************** */
+
 @import 'variables';
 
 .info {
@@ -31,90 +33,6 @@
     
     @media (max-width: $breakpoint-mobile) {
         height: 255px;
-    }
-
-    &__picture {
-        width: 100%;
-        height: auto;
-        border-radius: 25px;
-        object-fit: cover;
-    }
-
-    &__previousButton--active, &__nextButton--active {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        width: 100px;
-        background: none;
-        border: none;
-        padding: 20px;
-        cursor: pointer;
-
-        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-            width: 60px;
-            padding: 10px;
-        }
-            
-        @media (max-width: $breakpoint-mobile) {
-            width: 24px;
-            padding: 5px;
-        }
-    }
-
-    &__previousButton--inactive, &__nextButton--inactive {
-        display: none;
-    }
-
-    &__previousButton--icone, &__nextButton--icone {
-        font-size: 120px;
-        
-        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-            font-size: 75px;
-        }
-            
-        @media (max-width: $breakpoint-mobile) {
-            font-size: 30px;
-        }
-    }
-
-    &__previousButton--active {
-        left: -30px;
-
-        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-            left: -17px;
-        }
-            
-        @media (max-width: $breakpoint-mobile) {
-            left: -5px;
-        }
-    }
-      
-    &__nextButton--active {
-        right: 30px;
-
-        @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-            right: 20px;
-        }
-            
-        @media (max-width: $breakpoint-mobile) {
-            right: 10px;
-        }
-    }
-
-    &__slideIndex--active {
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 16px;
-        font-weight: 500;
-        border-radius: 5px;
-    }
-
-    &__slideIndex--inactive {
-        display: none;
     }
 }
 

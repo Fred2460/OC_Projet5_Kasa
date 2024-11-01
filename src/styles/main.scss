@@ -1,4 +1,4 @@
-/* ****************** CSS pour les pages ACCUEIL, A PROPOS et ERREUR ********************** */
+/* ****************** Style pour les pages ACCUEIL, A-PROPOS et ERREUR ********************** */
 
 @import 'variables';
 
@@ -21,7 +21,7 @@
   }
 }
 
-/* ---------------------------- CSS pour page ACCUEIL ---------------------------- */
+/* ****************** Style pour les banners des pages ACCUEIL et A-PROPOS ********************** */
 .banner {
   position: relative;
   width: 100%;
@@ -73,7 +73,6 @@
   color: white;
   font-size: 48px;
   font-weight: 700;
-  //-webkit-text-stroke: 1px black;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   top: 0;
   left: 0;
@@ -94,11 +93,12 @@
   }
 }
 
+/* ****************** Style pour la gallerie de la page ACCUEIL ********************** */
+
 .gallery {
   height: 830px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
   overflow-y:auto;
   gap: 50px;
   padding: 50px;
@@ -126,14 +126,9 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 10px;
     width: 100%;
     aspect-ratio: 1 / 1;
-    transition: 200ms;
     cursor: pointer;
-    z-index: 1;
 
     &--cover {
       position: absolute;
@@ -142,6 +137,17 @@
       border-radius: 10px;
       object-fit: cover;
       z-index: 0;
+    }
+
+    &--overlay {
+      position: absolute;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+      z-index: 1; 
     }
 
     &--title {
@@ -156,58 +162,70 @@
   }
 }
 
-/* ------------------ CSS pour page A PROPOS ----------------------- */
+/* ****************** Style pour la page A-PROPOS ********************** */
+
 .valeurs {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  margin: 40px 120px 40px 120px;
-  gap: 30px;
-
-  @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
-    margin: 30px 60px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 40px 120px 40px 120px;
     gap: 30px;
+  
+    @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+      margin: 30px 60px 30px 60px;
+      gap: 30px;
+    }
+  
+    @media (max-width: $breakpoint-mobile) {
+      margin: 25px 0 25px 0;
+      gap: 25px;
+    }
   }
 
-  @media (max-width: $breakpoint-mobile) {
-    margin: 25px 0 25px 0;
-    gap: 25px;
-  }
-}
+  /* ****************** Style pour la page ERREUR ********************** */
 
-/* ---------------------------- CSS pour page ERREUR ---------------------------- */
 .errorMain {
   align-items: center;
   color: $primaryT-color;
   margin: 50px;
   gap: 90px;
 
+  @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+    gap: 70px;
+  }
+  
+  @media (max-width: $breakpoint-mobile) {
+    gap: 50px ;
+  }
+
   &__H1 {
     font-size: 288px;
     font-weight: 700;
-    
-    @media (max-width: $breakpoint-mobile) {
-      font-size: 96px ;
-    }
+    margin-top: 0;
+    margin-bottom: 0;
 
     @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
       font-size: 192px;
-    }  
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 96px ;
+    }
   }
 
   &__H2 {
     font-size: 36px;
     font-weight: 500;
     text-align: center;
-    
-    @media (max-width: $breakpoint-mobile) {
-      font-size: 18px ;
-    }
 
     @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
       font-size: 24px;
-    }  
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 18px ;
+    }
   }
 
   &__Link {
@@ -216,13 +234,13 @@
     color: $secondaryT-color;
     text-decoration: underline;
     margin-bottom: 50px;
-  
-    @media (max-width: $breakpoint-mobile) {
-      font-size: 14px ;
-    }
 
     @media(min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
       font-size: 16px;
-    }  
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 14px ;
+    }
   }
 }

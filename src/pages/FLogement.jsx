@@ -2,32 +2,14 @@ import '../styles/flogement.scss'
 import Error from './Erreur'
 import logementsData from '../datas/logements.json'
 import { useParams } from 'react-router-dom'
-import { useState } from 'react';
-// pour le carrousel
 import { FaStar } from 'react-icons/fa'
-import { IoChevronBackSharp } from "react-icons/io5";
-import { IoChevronForwardSharp } from "react-icons/io5";
-// pour l'affichage du détails des informations du logement
-
+import Carousel from '../components/Carousel'
 import Collapse from '../components/Collapse'
 
 function FLogement() {
   /* récupération de l'id et des informations du logement sélectionné */
   const { id } = useParams()
   const logement = logementsData.find((logement) => logement.id === id)
-
-  /* gestion du carrousel */
-  const [currentIndex, setCurrentIndex] = useState(0)
-  
-  function nextImage() {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length)
-  }
-
-  function prevImage() {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
-    )
-  }
 
   /* gestion du cas où le logement de l'id sélectionné n'existe pas */
   if (!logement) {
@@ -37,17 +19,8 @@ function FLogement() {
   return (
     <div className='info'>
 
-      {/* carrousel */}
-      <div className='carousel'>
-        <button className={ (logement.pictures.length) > 1 ? 'carousel__previousButton--active' : 'carousel__previousButton--inactive'} onClick={prevImage}>
-          <IoChevronBackSharp className='carousel__previousButton--icone' /> {/* chevron précédent */}
-        </button>
-        <img className='carousel__picture' src={logement.pictures[currentIndex]} alt='carousel' />
-        <p className={ (logement.pictures.length) > 1 ? 'carousel__slideIndex--active' : 'carousel__slideIndex--inactive'} >{currentIndex+1}/{logement.pictures.length}</p>
-        <button className={ (logement.pictures.length) > 1 ? 'carousel__nextButton--active' : 'carousel__nextButton--inactive'} onClick={nextImage}>
-          <IoChevronForwardSharp className='carousel__nextButton--icone' /> {/* chevron suivant */}
-        </button>
-      </div>
+      {/* Carrousel de photos */}
+      <Carousel className="carousel" pictures={logement.pictures} />
 
       {/* informations principales du logement */}
       <div className="infoBlock">
