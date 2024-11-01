@@ -11,7 +11,9 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 // pour l'affichage du détails des informations du logement
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
-import { Collapse } from 'react-bootstrap'
+
+import Collapse from '../components/Collapse'
+//import { Collapse } from 'react-bootstrap'
 
 function FLogement() {
   /* récupération de l'id et des informations du logement sélectionné */
@@ -87,8 +89,29 @@ function FLogement() {
 
       {/* informations détaillées du logement */}
       <div className="details">
+        
+          <article className="details__block">
+            <Collapse title="Description">
+              <span>{logement.description}</span>
+            </Collapse>
+          </article>
 
-        {/* Description */}
+          <article  className="details__block">
+            <Collapse title="Équipements">
+              <span>
+                {logement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </span>
+            </Collapse>
+          </article>
+        
+      </div>
+    </div>
+  )
+}
+
+/*
         <article className="details__block">
           <div className="details__block__banner">
             Description
@@ -101,7 +124,6 @@ function FLogement() {
           </Collapse>
         </article>
         
-        {/* Equipements */}
         <article className="details__block">
           <div className="details__block__banner">
             Équipements
@@ -117,10 +139,6 @@ function FLogement() {
             </ul>
           </Collapse>
         </article>
-      </div>
-    </div>
-  )
-}
-
+*/
 export default FLogement
   
